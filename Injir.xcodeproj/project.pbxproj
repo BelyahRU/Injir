@@ -16,6 +16,9 @@
 		1A454D692B5C07530057199F /* InjirUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D682B5C07530057199F /* InjirUITestsLaunchTests.swift */; };
 		1A454D7E2B5C09390057199F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1A454D7D2B5C09390057199F /* .gitignore */; };
 		1A454D812B5C10370057199F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D802B5C10370057199F /* HomeViewController.swift */; };
+		1A454D842B5C11F40057199F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D832B5C11F40057199F /* HomeView.swift */; };
+		1A454D872B5C137F0057199F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1A454D862B5C137F0057199F /* SnapKit */; };
+		1A454D892B5C13E40057199F /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D882B5C13E40057199F /* Resources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,8 @@
 		1A454D682B5C07530057199F /* InjirUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjirUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1A454D7D2B5C09390057199F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		1A454D802B5C10370057199F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1A454D832B5C11F40057199F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1A454D882B5C13E40057199F /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A454D872B5C137F0057199F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +153,7 @@
 		1A454D772B5C07A50057199F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1A454D802B5C10370057199F /* HomeViewController.swift */,
+				1A454D822B5C11D90057199F /* HomeViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				1A454D4E2B5C07530057199F /* Assets.xcassets */,
+				1A454D882B5C13E40057199F /* Resources.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -199,6 +206,15 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		1A454D822B5C11D90057199F /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A454D802B5C10370057199F /* HomeViewController.swift */,
+				1A454D832B5C11F40057199F /* HomeView.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,6 +231,9 @@
 			dependencies = (
 			);
 			name = Injir;
+			packageProductDependencies = (
+				1A454D862B5C137F0057199F /* SnapKit */,
+			);
 			productName = Injir;
 			productReference = 1A454D422B5C07520057199F /* Injir.app */;
 			productType = "com.apple.product-type.application";
@@ -287,6 +306,9 @@
 				Base,
 			);
 			mainGroup = 1A454D392B5C07520057199F;
+			packageReferences = (
+				1A454D852B5C137F0057199F /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 1A454D432B5C07520057199F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -331,7 +353,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A454D462B5C07520057199F /* AppDelegate.swift in Sources */,
+				1A454D842B5C11F40057199F /* HomeView.swift in Sources */,
 				1A454D482B5C07520057199F /* SceneDelegate.swift in Sources */,
+				1A454D892B5C13E40057199F /* Resources.swift in Sources */,
 				1A454D812B5C10370057199F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -658,6 +682,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A454D852B5C137F0057199F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A454D862B5C137F0057199F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A454D852B5C137F0057199F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1A454D3A2B5C07520057199F /* Project object */;
 }
