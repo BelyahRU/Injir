@@ -39,15 +39,22 @@ class HomeViewController: UIViewController {
         logInButton = homeView.logInButton
         registrationButton = homeView.registrationButton
         
-        logInButton.addTarget(self, action: #selector(logIn), for: .touchUpInside)
+        logInButton.addTarget(self, action: #selector(logInPressed), for: .touchUpInside)
+        registrationButton.addTarget(self, action: #selector(registrationPressed), for: .touchUpInside)
     }
 
 }
 
 extension HomeViewController {
-    @objc func logIn() {
+    @objc func logInPressed() {
         let logInVC = LogInViewController()
         navigationController?.pushViewController(logInVC, animated: true)
+        
+    }
+    
+    @objc func registrationPressed() {
+        let registerVC = RegistrationViewController()
+        navigationController?.pushViewController(registerVC, animated: true)
         
     }
 }

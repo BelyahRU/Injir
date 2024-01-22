@@ -23,6 +23,8 @@
 		1A454D8E2B5C27E20057199F /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D8D2B5C27E20057199F /* LogInView.swift */; };
 		1A454D902B5C34B60057199F /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D8F2B5C34B60057199F /* UITextField+Ext.swift */; };
 		1A454DD22B5E8AA10057199F /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454DD12B5E8AA10057199F /* UIButton+Ext.swift */; };
+		1A454DD52B5E908A0057199F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454DD42B5E908A0057199F /* RegistrationViewController.swift */; };
+		1A454DD72B5E909E0057199F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454DD62B5E909E0057199F /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		1A454D8D2B5C27E20057199F /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		1A454D8F2B5C34B60057199F /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
 		1A454DD12B5E8AA10057199F /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		1A454DD42B5E908A0057199F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		1A454DD62B5E909E0057199F /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 		1A454D772B5C07A50057199F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1A454DD32B5E90710057199F /* RegistrationViewController */,
 				1A454D8A2B5C231A0057199F /* LogInViewController */,
 				1A454D822B5C11D90057199F /* HomeViewController */,
 			);
@@ -233,6 +238,15 @@
 				1A454D8D2B5C27E20057199F /* LogInView.swift */,
 			);
 			path = LogInViewController;
+			sourceTree = "<group>";
+		};
+		1A454DD32B5E90710057199F /* RegistrationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A454DD42B5E908A0057199F /* RegistrationViewController.swift */,
+				1A454DD62B5E909E0057199F /* RegistrationView.swift */,
+			);
+			path = RegistrationViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,10 +386,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A454DD72B5E909E0057199F /* RegistrationView.swift in Sources */,
 				1A454D462B5C07520057199F /* AppDelegate.swift in Sources */,
 				1A454D8E2B5C27E20057199F /* LogInView.swift in Sources */,
 				1A454DD22B5E8AA10057199F /* UIButton+Ext.swift in Sources */,
 				1A454D842B5C11F40057199F /* HomeView.swift in Sources */,
+				1A454DD52B5E908A0057199F /* RegistrationViewController.swift in Sources */,
 				1A454D902B5C34B60057199F /* UITextField+Ext.swift in Sources */,
 				1A454D8C2B5C233A0057199F /* LogInViewController.swift in Sources */,
 				1A454D482B5C07520057199F /* SceneDelegate.swift in Sources */,
