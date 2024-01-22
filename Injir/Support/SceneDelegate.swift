@@ -17,7 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
-        window?.rootViewController = HomeViewController()
+        let homeVC = UINavigationController(rootViewController: HomeViewController())
+        homeVC.navigationBar.isHidden = true
+        window?.rootViewController = homeVC
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

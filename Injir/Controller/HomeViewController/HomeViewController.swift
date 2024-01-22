@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     private let homeView = HomeView()
     
     private var logInButton = UIButton()
-    private var registerButton = UIButton()
+    private var registrationButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
     
     private func configure() {
         setupView()
-        setupView()
+        setupButtons()
     }
     
     private func setupView() {
@@ -37,6 +37,17 @@ class HomeViewController: UIViewController {
     
     private func setupButtons() {
         logInButton = homeView.logInButton
+        registrationButton = homeView.registrationButton
+        
+        logInButton.addTarget(self, action: #selector(logIn), for: .touchUpInside)
     }
 
+}
+
+extension HomeViewController {
+    @objc func logIn() {
+        let logInVC = LogInViewController()
+        navigationController?.pushViewController(logInVC, animated: true)
+        
+    }
 }

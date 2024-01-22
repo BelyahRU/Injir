@@ -22,28 +22,28 @@ class HomeView: UIView {
     
     public let logInButton: UIButton = {
         let button = UIButton()
-        button.layer.borderColor = CGColor(red: 255, green: 255, blue: 255, alpha: 1)
+        button.layer.borderColor = Resources.Colors.whiteCGColor
         button.backgroundColor = .clear
         button.layer.borderWidth = 3
         button.layer.cornerRadius = 21
         button.setTitle("Войти", for: .normal)
         button.contentHorizontalAlignment = .left
-//        button.configuration = UIButton.Configuration.plain()
-//        button.configuration?.imagePadding = 55
-        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 0)
+        button.configuration = UIButton.Configuration.plain()
+        button.configuration?.contentInsets.leading = 25
         button.setTitleColor(.white, for: .normal)
         return button
     }()
     
-    public let regestrationButton: UIButton = {
+    public let registrationButton: UIButton = {
         let button = UIButton()
-        button.layer.borderColor = CGColor(red: 255, green: 255, blue: 255, alpha: 1)
+        button.layer.borderColor = Resources.Colors.whiteCGColor
         button.backgroundColor = .clear
         button.layer.borderWidth = 3
         button.layer.cornerRadius = 21
         button.setTitle("Регистрация", for: .normal)
         button.contentHorizontalAlignment = .left
-        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 0)
+        button.configuration = UIButton.Configuration.plain()
+        button.configuration?.contentInsets.leading = 25
         button.setTitleColor(.white, for: .normal)
         return button
     }()
@@ -71,14 +71,14 @@ class HomeView: UIView {
     }
     
     private func settingsForView() {
-        backgroundColor = UIColor(red: 66/255, green: 12/255, blue: 93/255, alpha: 1.0)
+        backgroundColor = Resources.Colors.purpleColor
     }
     
     private func setupSubviews() {
         addSubview(logoImage)
         addSubview(injirLabel)
         addSubview(logInButton)
-        addSubview(regestrationButton)
+        addSubview(registrationButton)
     }
     
     private func setupConstraints() {
@@ -98,7 +98,7 @@ class HomeView: UIView {
             make.centerX.equalToSuperview()
             make.top.equalTo(logoImage.snp.bottom).offset(98.85)
         }
-        regestrationButton.snp.makeConstraints { make in
+        registrationButton.snp.makeConstraints { make in
             make.width.equalTo(357)
             make.height.equalTo(47)
             make.centerX.equalToSuperview()
