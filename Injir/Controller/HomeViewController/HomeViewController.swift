@@ -66,9 +66,8 @@ class HomeViewController: UIViewController {
     private func configure() {
         setupView()
         setupButtons()
-        
-        setupSV()
-        setupUI()
+        //setupSV()
+        //setupUI()
     }
     
     private func setupView() {

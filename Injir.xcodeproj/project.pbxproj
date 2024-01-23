@@ -25,6 +25,9 @@
 		1A454DD22B5E8AA10057199F /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454DD12B5E8AA10057199F /* UIButton+Ext.swift */; };
 		1A454DD52B5E908A0057199F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454DD42B5E908A0057199F /* RegistrationViewController.swift */; };
 		1A454DD72B5E909E0057199F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454DD62B5E909E0057199F /* RegistrationView.swift */; };
+		1A454DDC2B5FEEE30057199F /* LanguageSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454DDB2B5FEEE30057199F /* LanguageSelectionViewModel.swift */; };
+		1A454DDE2B5FF0E40057199F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454DDD2B5FF0E40057199F /* Observable.swift */; };
+		1A454DE02B5FF3560057199F /* HomeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454DDF2B5FF3560057199F /* HomeViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		1A454DD12B5E8AA10057199F /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		1A454DD42B5E908A0057199F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		1A454DD62B5E909E0057199F /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		1A454DDB2B5FEEE30057199F /* LanguageSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionViewModel.swift; sourceTree = "<group>"; };
+		1A454DDD2B5FF0E40057199F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		1A454DDF2B5FF3560057199F /* HomeViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,7 @@
 		1A454D762B5C07920057199F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1A454DDB2B5FEEE30057199F /* LanguageSelectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -182,6 +189,7 @@
 		1A454D792B5C07BA0057199F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1A454DDD2B5FF0E40057199F /* Observable.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -227,6 +235,7 @@
 			children = (
 				1A454D802B5C10370057199F /* HomeViewController.swift */,
 				1A454D832B5C11F40057199F /* HomeView.swift */,
+				1A454DDF2B5FF3560057199F /* HomeViewController2.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -386,6 +395,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A454DE02B5FF3560057199F /* HomeViewController2.swift in Sources */,
+				1A454DDE2B5FF0E40057199F /* Observable.swift in Sources */,
 				1A454DD72B5E909E0057199F /* RegistrationView.swift in Sources */,
 				1A454D462B5C07520057199F /* AppDelegate.swift in Sources */,
 				1A454D8E2B5C27E20057199F /* LogInView.swift in Sources */,
@@ -396,6 +407,7 @@
 				1A454D8C2B5C233A0057199F /* LogInViewController.swift in Sources */,
 				1A454D482B5C07520057199F /* SceneDelegate.swift in Sources */,
 				1A454D892B5C13E40057199F /* Resources.swift in Sources */,
+				1A454DDC2B5FEEE30057199F /* LanguageSelectionViewModel.swift in Sources */,
 				1A454D812B5C10370057199F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

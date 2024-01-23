@@ -48,6 +48,36 @@ class HomeView: UIView {
         return button
     }()
     
+    public let selectLanguageButton: UIButton = {
+        let button = UIButton()
+        return button
+    }()
+    
+    private let languageLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Язык"
+        label.font = UIFont.systemFont(ofSize: 17)
+        return label
+    }()
+    
+    public let languagesView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 21
+        view.layer.borderColor = Resources.Colors.whiteCGColor
+        view.layer.borderWidth = 3
+        return view
+    }()
+    
+    public lazy var buttonsStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.distribution = .equalSpacing
+        stackView.isHidden = true
+        stackView.spacing = 6
+        return stackView
+    }()
+    
     
 
     override init(frame: CGRect) {
@@ -77,7 +107,12 @@ class HomeView: UIView {
         addSubview(injirLabel)
         addSubview(logInButton)
         addSubview(registrationButton)
-
+        
+        addSubview(languagesView)
+        languagesView.addSubview(languageLabel)
+        languagesView.addSubview(selectLanguageButton)
+        languagesView.addSubview(buttonsStackView)
+        
     }
     
     private func setupConstraints() {
@@ -103,8 +138,59 @@ class HomeView: UIView {
             make.centerX.equalToSuperview()
             make.top.equalTo(logInButton.snp.bottom).offset(25)
         }
+    }
+    
+    
+    public func updateUIForSelectEDLanguage(language: String) {
+        buttonsStackView.isHidden = true
+        selectLanguageButton.isHidden = false
+        languagesView.snp.removeConstraints()
+        languageLabel.snp.removeConstraints()
+        
+        languagesView.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(18)
+            make.top.equalToSuperview().offset(686)
+            make.width.equalTo(136)
+            make.height.equalTo(47)
+        }
+        
+        languageLabel.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.equalToSuperview().offset(25)
+        }
+        
+        selectLanguageButton.snp.makeConstraints { make in
+            make.width.height.equalTo(35)
+            make.leading.equalTo(languageLabel.snp.trailing).offset(17)
+            make.centerY.equalToSuperview()
+        }
+    }
+    
+    public func updateUIForSelectINGLanguage() {
+        buttonsStackView.isHidden = false
+        selectLanguageButton.isHidden = true
+        languagesView.snp.removeConstraints()
+        languageLabel.snp.removeConstraints()
         
         
+        languagesView.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(18)
+            make.top.equalToSuperview().offset(686)
+            make.width.equalTo(311)
+            make.height.equalTo(47)
+        }
+        
+        languageLabel.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.equalToSuperview().offset(25)
+        }
+        
+        buttonsStackView.snp.makeConstraints { make in
+            make.height.equalTo(47)
+            make.centerY.equalToSuperview()
+            make.leading.equalTo(languageLabel.snp.trailing).offset(17)
+            make.width.equalTo(200)
+        }
     }
     
 }
