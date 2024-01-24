@@ -50,6 +50,7 @@ class HomeView: UIView {
     
     public let selectLanguageButton: UIButton = {
         let button = UIButton()
+
         return button
     }()
     
@@ -141,56 +142,64 @@ class HomeView: UIView {
     }
     
     
-    public func updateUIForSelectEDLanguage(language: String) {
-        buttonsStackView.isHidden = true
-        selectLanguageButton.isHidden = false
-        languagesView.snp.removeConstraints()
-        languageLabel.snp.removeConstraints()
-        
-        languagesView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(18)
-            make.top.equalToSuperview().offset(686)
-            make.width.equalTo(136)
-            make.height.equalTo(47)
-        }
-        
-        languageLabel.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().offset(25)
-        }
-        
-        selectLanguageButton.snp.makeConstraints { make in
-            make.width.height.equalTo(35)
-            make.leading.equalTo(languageLabel.snp.trailing).offset(17)
-            make.centerY.equalToSuperview()
-        }
-    }
-    
-    public func updateUIForSelectINGLanguage() {
-        buttonsStackView.isHidden = false
-        selectLanguageButton.isHidden = true
-        languagesView.snp.removeConstraints()
-        languageLabel.snp.removeConstraints()
-        
-        
-        languagesView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(18)
-            make.top.equalToSuperview().offset(686)
-            make.width.equalTo(311)
-            make.height.equalTo(47)
-        }
-        
-        languageLabel.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().offset(25)
-        }
-        
-        buttonsStackView.snp.makeConstraints { make in
-            make.height.equalTo(47)
-            make.centerY.equalToSuperview()
-            make.leading.equalTo(languageLabel.snp.trailing).offset(17)
-            make.width.equalTo(200)
+    public func updateUIForSelectedLanguage(_ selectedLanguage: String) {
+        selectLanguageButton.setImage(UIImage(named: selectedLanguage), for: .normal)
+
+        UIView.animate(withDuration: 0.2) {
+            self.buttonsStackView.isHidden = true
+            self.selectLanguageButton.isHidden = false
+            self.languagesView.snp.removeConstraints()
+            self.languageLabel.snp.removeConstraints()
+
+            self.languagesView.snp.makeConstraints { make in
+                make.leading.equalToSuperview().offset(18)
+                make.top.equalToSuperview().offset(686)
+                make.width.equalTo(136)
+                make.height.equalTo(47)
+            }
+
+            self.languageLabel.snp.makeConstraints { make in
+                make.centerY.equalToSuperview()
+                make.leading.equalToSuperview().offset(25)
+            }
+
+            self.selectLanguageButton.snp.makeConstraints { make in
+                make.width.height.equalTo(35)
+                make.leading.equalTo(self.languageLabel.snp.trailing).offset(17)
+                make.centerY.equalToSuperview()
+            }
+
+            self.layoutIfNeeded()
         }
     }
+
+    public func updateUIForDeselectLanguage() {
+        UIView.animate(withDuration: 0.2) {
+            self.buttonsStackView.isHidden = false
+            self.selectLanguageButton.isHidden = true
+            self.languagesView.snp.remakeConstraints { make in
+                make.leading.equalToSuperview().offset(18)
+                make.top.equalToSuperview().offset(686)
+                make.width.equalTo(311)
+                make.height.equalTo(47)
+            }
+
+            self.languageLabel.snp.remakeConstraints { make in
+                make.centerY.equalToSuperview()
+                make.leading.equalToSuperview().offset(25)
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                self.buttonsStackView.snp.remakeConstraints { make in
+                    make.height.equalTo(47)
+                    make.centerY.equalToSuperview()
+                    make.leading.equalTo(self.languageLabel.snp.trailing).offset(17)
+                    make.width.equalTo(200)
+                }
+            }
+            self.layoutIfNeeded()
+        }
+    }
+
+
     
 }

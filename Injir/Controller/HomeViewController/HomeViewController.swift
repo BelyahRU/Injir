@@ -1,73 +1,34 @@
 //
-//  HomeViewController.swift
+//  HomeViewController2.swift
 //  Injir
 //
-//  Created by Александр Андреев on 20.01.2024.
+//  Created by Александр Андреев on 23.01.2024.
 //
 
+import Foundation
 import UIKit
 import SnapKit
 
 class HomeViewController: UIViewController {
     
     private let homeView = HomeView()
-    
-    private var logInButton = UIButton()
-    private var registrationButton = UIButton()
-    private var languageButton = UIButton()
-    
-    
-    public let selectLanguageButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: Resources.Buttons.Flags.russia), for: .normal)
-        return button
-    }()
-    
-    private let languageLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Язык"
-        label.font = UIFont.systemFont(ofSize: 17)
-        return label
-    }()
-    
-    public let languagesView: UIView = {
-        let view = UIView()
-        view.layer.cornerRadius = 21
-        view.layer.borderColor = Resources.Colors.whiteCGColor
-        view.layer.borderWidth = 3
-        return view
-    }()
-    
-    public var buttonsArray: [String] = [Resources.Buttons.Flags.russia,
-        Resources.Buttons.Flags.uk,
-        Resources.Buttons.Flags.uzbekistan,
-        Resources.Buttons.Flags.tajikistan,
-        Resources.Buttons.Flags.turkmenistan,
-    ]
-    
-    public lazy var buttonsStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.alignment = .center
-        stackView.distribution = .equalSpacing
-        stackView.isHidden = true
-        stackView.spacing = 6
-        return stackView
-    }()
-    
-    
+
+    let languageSelectionViewModel = LanguageSelectionViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-       
+        
+        languageSelectionViewModel.selectedLanguageObservable.bind { [weak self] selectedLanguage in
+            self?.updateLanguageUI(language: selectedLanguage)
+        }
     }
+    
     
     private func configure() {
         setupView()
         setupButtons()
-        //setupSV()
-        //setupUI()
+        setupSV()
     }
     
     private func setupView() {
@@ -77,80 +38,48 @@ class HomeViewController: UIViewController {
         }
     }
     
-    private func setupUI() {
-        view.addSubview(languagesView)
-        languagesView.addSubview(languageLabel)
-        languagesView.addSubview(selectLanguageButton)
-        languagesView.addSubview(buttonsStackView)
-        constraintsIfLanguageSelected()
-    }
-    
-    private func constraintsIfLanguageSelected() {
-        buttonsStackView.isHidden = true
-        selectLanguageButton.isHidden = false
-        languagesView.snp.removeConstraints()
-        languageLabel.snp.removeConstraints()
-        
-        languagesView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(18)
-            make.top.equalToSuperview().offset(686)
-            make.width.equalTo(136)
-            make.height.equalTo(47)
-        }
-        
-        languageLabel.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().offset(25)
-        }
-        
-        selectLanguageButton.snp.makeConstraints { make in
-            make.width.height.equalTo(35)
-            make.leading.equalTo(languageLabel.snp.trailing).offset(17)
-            make.centerY.equalToSuperview()
+    private func updateLanguageUI(language: String?) {
+        if language == nil {
+            homeView.updateUIForDeselectLanguage()
+        } else {
+            homeView.updateUIForSelectedLanguage(language!)
         }
     }
     
-    private func constraintsIfLanguageSelecting() {
-        buttonsStackView.isHidden = false
-        selectLanguageButton.isHidden = true
-        languagesView.snp.removeConstraints()
-        languageLabel.snp.removeConstraints()
-        
-        
-        languagesView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(18)
-            make.top.equalToSuperview().offset(686)
-            make.width.equalTo(311)
-            make.height.equalTo(47)
-        }
-        
-        languageLabel.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().offset(25)
-        }
-        
-        buttonsStackView.snp.makeConstraints { make in
-//            make.width.equalTo(192)
-            make.height.equalTo(47)
-            make.centerY.equalToSuperview()
-            make.leading.equalTo(languageLabel.snp.trailing).offset(17)
-            make.width.equalTo(200)
-        }
-        
-    }
     
     private func setupButtons() {
-        logInButton = homeView.logInButton
-        registrationButton = homeView.registrationButton
         
-        
-        logInButton.addTarget(self, action: #selector(logInPressed), for: .touchUpInside)
-        registrationButton.addTarget(self, action: #selector(registrationPressed), for: .touchUpInside)
-        selectLanguageButton.addTarget(self, action: #selector(showLanguages), for: .touchUpInside)
+        homeView.logInButton.addTarget(self, action: #selector(logInPressed), for: .touchUpInside)
+        homeView.registrationButton.addTarget(self, action: #selector(registrationPressed), for: .touchUpInside)
+        homeView.selectLanguageButton.addTarget(self, action: #selector(showLanguages), for: .touchUpInside)
     }
 
 }
 
+extension HomeViewController {
+    func setupSV(){
+        for language in languageSelectionViewModel.availableLanguages {
+            let button = createLanguageButton(language: language)
+            homeView.buttonsStackView.addArrangedSubview(button)
+        }
+    }
+    
+    func createLanguageButton(language: String) -> UIButton {
+        let button = UIButton()
+        
+        button.setImage(UIImage(named: language), for: .normal)
+        button.snp.makeConstraints { make in
+            make.width.height.equalTo(35)
+        }
+        button.setTitle(language, for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
+        button.setTitleColor(.clear, for: .normal)
+        button.addTarget(self, action: #selector(languageButtonTapped(_:)), for: .touchUpInside)
+        return button
+    }
+}
+
+//MARK: Actions
 extension HomeViewController {
     @objc func logInPressed() {
         let logInVC = LogInViewController()
@@ -165,32 +94,11 @@ extension HomeViewController {
     }
     
     @objc func showLanguages() {
-        constraintsIfLanguageSelecting()
+        languageSelectionViewModel.deselectLanguage()
     }
     
     @objc func languageButtonTapped(_ sender: UIButton) {
-        selectLanguageButton.setImage(sender.currentImage, for: .normal)
-        constraintsIfLanguageSelected()
+        languageSelectionViewModel.selectLanguage(sender.currentTitle!)
     }
 }
 
-extension HomeViewController {
-    func createLanguageButton(language: String) -> UIButton {
-        let button = UIButton()
-        button.setImage(UIImage(named: language), for: .normal)
-        button.snp.makeConstraints { make in
-            make.width.height.equalTo(35)
-        }
-        button.imageView?.contentMode = .scaleAspectFit
-        button.setTitleColor(.blue, for: .normal)
-        button.addTarget(self, action: #selector(languageButtonTapped(_:)), for: .touchUpInside)
-        return button
-    }
-    
-    func setupSV(){
-        for language in buttonsArray {
-            let button = createLanguageButton(language: language)
-            buttonsStackView.addArrangedSubview(button)
-        }
-    }
-}

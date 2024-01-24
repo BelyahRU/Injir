@@ -15,7 +15,6 @@
 		1A454D672B5C07530057199F /* InjirUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D662B5C07530057199F /* InjirUITests.swift */; };
 		1A454D692B5C07530057199F /* InjirUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D682B5C07530057199F /* InjirUITestsLaunchTests.swift */; };
 		1A454D7E2B5C09390057199F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1A454D7D2B5C09390057199F /* .gitignore */; };
-		1A454D812B5C10370057199F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D802B5C10370057199F /* HomeViewController.swift */; };
 		1A454D842B5C11F40057199F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D832B5C11F40057199F /* HomeView.swift */; };
 		1A454D872B5C137F0057199F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1A454D862B5C137F0057199F /* SnapKit */; };
 		1A454D892B5C13E40057199F /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D882B5C13E40057199F /* Resources.swift */; };
@@ -27,7 +26,7 @@
 		1A454DD72B5E909E0057199F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454DD62B5E909E0057199F /* RegistrationView.swift */; };
 		1A454DDC2B5FEEE30057199F /* LanguageSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454DDB2B5FEEE30057199F /* LanguageSelectionViewModel.swift */; };
 		1A454DDE2B5FF0E40057199F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454DDD2B5FF0E40057199F /* Observable.swift */; };
-		1A454DE02B5FF3560057199F /* HomeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454DDF2B5FF3560057199F /* HomeViewController2.swift */; };
+		1A454DE02B5FF3560057199F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454DDF2B5FF3560057199F /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +59,6 @@
 		1A454D662B5C07530057199F /* InjirUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjirUITests.swift; sourceTree = "<group>"; };
 		1A454D682B5C07530057199F /* InjirUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjirUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1A454D7D2B5C09390057199F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		1A454D802B5C10370057199F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1A454D832B5C11F40057199F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1A454D882B5C13E40057199F /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		1A454D8B2B5C233A0057199F /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +69,7 @@
 		1A454DD62B5E909E0057199F /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		1A454DDB2B5FEEE30057199F /* LanguageSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionViewModel.swift; sourceTree = "<group>"; };
 		1A454DDD2B5FF0E40057199F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		1A454DDF2B5FF3560057199F /* HomeViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController2.swift; sourceTree = "<group>"; };
+		1A454DDF2B5FF3560057199F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +154,8 @@
 		1A454D752B5C078C0057199F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A454DD62B5E909E0057199F /* RegistrationView.swift */,
+				1A454D832B5C11F40057199F /* HomeView.swift */,
 				1A454D502B5C07530057199F /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -233,9 +233,7 @@
 		1A454D822B5C11D90057199F /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1A454D802B5C10370057199F /* HomeViewController.swift */,
-				1A454D832B5C11F40057199F /* HomeView.swift */,
-				1A454DDF2B5FF3560057199F /* HomeViewController2.swift */,
+				1A454DDF2B5FF3560057199F /* HomeViewController.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -253,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				1A454DD42B5E908A0057199F /* RegistrationViewController.swift */,
-				1A454DD62B5E909E0057199F /* RegistrationView.swift */,
 			);
 			path = RegistrationViewController;
 			sourceTree = "<group>";
@@ -395,7 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A454DE02B5FF3560057199F /* HomeViewController2.swift in Sources */,
+				1A454DE02B5FF3560057199F /* HomeViewController.swift in Sources */,
 				1A454DDE2B5FF0E40057199F /* Observable.swift in Sources */,
 				1A454DD72B5E909E0057199F /* RegistrationView.swift in Sources */,
 				1A454D462B5C07520057199F /* AppDelegate.swift in Sources */,
@@ -408,7 +405,6 @@
 				1A454D482B5C07520057199F /* SceneDelegate.swift in Sources */,
 				1A454D892B5C13E40057199F /* Resources.swift in Sources */,
 				1A454DDC2B5FEEE30057199F /* LanguageSelectionViewModel.swift in Sources */,
-				1A454D812B5C10370057199F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
