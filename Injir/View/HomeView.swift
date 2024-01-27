@@ -48,11 +48,7 @@ class HomeView: UIView {
         return button
     }()
     
-    public let selectLanguageButton: UIButton = {
-        let button = UIButton()
-
-        return button
-    }()
+    public let selectLanguageButton = UIButton()
     
     private let languageLabel: UILabel = {
         let label = UILabel()
@@ -93,8 +89,8 @@ class HomeView: UIView {
     //MARK: Methods
     private func configure() {
         settingsForView()
-        
         setupSubviews()
+        setupLanguageView()
         setupConstraints()
     }
     
@@ -108,12 +104,14 @@ class HomeView: UIView {
         addSubview(injirLabel)
         addSubview(logInButton)
         addSubview(registrationButton)
-        
         addSubview(languagesView)
+        
+    }
+    
+    private func setupLanguageView() {
         languagesView.addSubview(languageLabel)
         languagesView.addSubview(selectLanguageButton)
         languagesView.addSubview(buttonsStackView)
-        
     }
     
     private func setupConstraints() {
@@ -173,7 +171,7 @@ class HomeView: UIView {
         }
     }
 
-    public func updateUIForDeselectLanguage() {
+    public func showChangingLanguageMenu() {
         UIView.animate(withDuration: 0.2) {
             self.buttonsStackView.isHidden = false
             self.selectLanguageButton.isHidden = true
@@ -188,7 +186,7 @@ class HomeView: UIView {
                 make.centerY.equalToSuperview()
                 make.leading.equalToSuperview().offset(25)
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 self.buttonsStackView.snp.remakeConstraints { make in
                     make.height.equalTo(47)
                     make.centerY.equalToSuperview()

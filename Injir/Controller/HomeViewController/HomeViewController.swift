@@ -13,36 +13,38 @@ class HomeViewController: UIViewController {
     
     private let homeView = HomeView()
 
-    let languageSelectionViewModel = LanguageSelectionViewModel()
+    private let languageSelectionViewModel = LanguageSelectionViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        
+    }
+    
+    private func configure() {
+        setupViewModel()
+        setupView()
+        setupButtons()
+        setupSV()
+    }
+    
+    private func setupViewModel() {
         languageSelectionViewModel.selectedLanguageObservable.bind { [weak self] selectedLanguage in
             self?.updateLanguageUI(language: selectedLanguage)
         }
     }
     
-    
-    private func configure() {
-        setupView()
-        setupButtons()
-        setupSV()
+    private func updateLanguageUI(language: String?) {
+        if language == nil {
+            homeView.showChangingLanguageMenu()
+        } else {
+            homeView.updateUIForSelectedLanguage(language!)
+        }
     }
     
     private func setupView() {
         view.addSubview(homeView)
         homeView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-        }
-    }
-    
-    private func updateLanguageUI(language: String?) {
-        if language == nil {
-            homeView.updateUIForDeselectLanguage()
-        } else {
-            homeView.updateUIForSelectedLanguage(language!)
         }
     }
     
@@ -55,7 +57,7 @@ class HomeViewController: UIViewController {
     }
 
 }
-
+//MARK: settings for language stackView
 extension HomeViewController {
     func setupSV(){
         for language in languageSelectionViewModel.availableLanguages {

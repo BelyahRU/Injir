@@ -35,6 +35,7 @@ class RegistrationViewController: UIViewController {
     
 }
 
+//MARK: Actions
 extension RegistrationViewController {
     
     @objc func backPressed() {

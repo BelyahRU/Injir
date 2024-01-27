@@ -68,6 +68,7 @@ class RegistrationView: UIView {
     private func configure() {
         settingForView()
         setupSubviews()
+        setupStackView()
         setupConstraints()
     }
     
@@ -79,13 +80,14 @@ class RegistrationView: UIView {
         addSubview(backButton)
         addSubview(registrationLabel)
         addSubview(registerTFsStackView)
+        addSubview(nextButton)
         
+    }
+    
+    func setupStackView() {
         registerTFsStackView.addArrangedSubview(phoneNumberTF)
         registerTFsStackView.addArrangedSubview(passwordTF)
         registerTFsStackView.addArrangedSubview(repeatPasswordTF)
-        
-        addSubview(nextButton)
-        
     }
     
     private func setupConstraints() {

@@ -13,7 +13,6 @@ class LogInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configure()
     }
     
@@ -35,6 +34,7 @@ class LogInViewController: UIViewController {
     
 }
 
+//MARK: Actions
 extension LogInViewController {
     
     @objc func backPressed() {

@@ -154,6 +154,7 @@
 		1A454D752B5C078C0057199F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A454D8D2B5C27E20057199F /* LogInView.swift */,
 				1A454DD62B5E909E0057199F /* RegistrationView.swift */,
 				1A454D832B5C11F40057199F /* HomeView.swift */,
 				1A454D502B5C07530057199F /* LaunchScreen.storyboard */,
@@ -242,7 +243,6 @@
 			isa = PBXGroup;
 			children = (
 				1A454D8B2B5C233A0057199F /* LogInViewController.swift */,
-				1A454D8D2B5C27E20057199F /* LogInView.swift */,
 			);
 			path = LogInViewController;
 			sourceTree = "<group>";

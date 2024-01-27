@@ -8,15 +8,11 @@
 import Foundation
 class LanguageSelectionViewModel {
     
-    // Observable для отслеживания выбранного языка
     var selectedLanguageObservable = Observable<String>("russia")
     
-    // Доступные языки
     let availableLanguages = ["russia", "uzbekistan", "uk", "turkmenistan", "tajikistan"]
     
-    // Метод для выбора языка
     func selectLanguage(_ language: String) {
-        // Устанавливаем выбранный язык
         selectedLanguageObservable.value = language
     }
     

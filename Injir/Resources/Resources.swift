@@ -23,13 +23,6 @@ enum Resources {
     enum Buttons {
         static let backButton = "backArrow"
         
-        enum Flags {
-            static let russia = "russia"
-            static let uzbekistan = "uzbekistan"
-            static let uk = "uk"
-            static let turkmenistan = "turkmenistan"
-            static let tajikistan = "tajikistan"
-        }
     }
     
 }
