@@ -31,9 +31,18 @@ class RegistrationView: UIView {
         return sv
     }()
     
-    public let phoneNumberTF: UITextField = {
+    public let loginTF: UITextField = {
         let tf = UITextField()
-        tf.generateTF(text: "Введите номер телефона")
+        tf.generateTF(text: "Введите логин")
+        tf.textContentType = .username
+        return tf
+    }()
+    
+    public let emailTF: UITextField = {
+        let tf = UITextField()
+        tf.generateTF(text: "Введите email")
+        tf.keyboardType = .emailAddress
+        tf.textContentType = .emailAddress
         return tf
     }()
     
@@ -84,8 +93,9 @@ class RegistrationView: UIView {
         
     }
     
-    func setupStackView() {
-        registerTFsStackView.addArrangedSubview(phoneNumberTF)
+    private func setupStackView() {
+        registerTFsStackView.addArrangedSubview(loginTF)
+        registerTFsStackView.addArrangedSubview(emailTF)
         registerTFsStackView.addArrangedSubview(passwordTF)
         registerTFsStackView.addArrangedSubview(repeatPasswordTF)
     }
@@ -104,9 +114,9 @@ class RegistrationView: UIView {
             make.top.equalToSuperview().offset(190)
             make.centerX.equalToSuperview()
             make.width.equalTo(357)
-            make.bottom.equalToSuperview().inset(473)
+            make.bottom.equalToSuperview().inset(402)
         }
-        [phoneNumberTF, passwordTF, repeatPasswordTF].forEach({
+        [loginTF, emailTF, passwordTF, repeatPasswordTF].forEach({
             $0.snp.makeConstraints { make in
                 make.width.equalTo(357)
                 make.height.equalTo(47)

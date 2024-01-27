@@ -23,11 +23,10 @@ class LogInView: UIView, UITextFieldDelegate {
         return label
     }()
     
-    public let phoneNumberTF: UITextField = {
+    public let loginTF: UITextField = {
         let tf = UITextField()
-        tf.generateTF(text: "Введите номер телефона")
-        tf.textContentType = .telephoneNumber
-        tf.keyboardType = .phonePad
+        tf.generateTF(text: "Введите логин")
+        tf.textContentType = .username
         return tf
     }()
     
@@ -83,7 +82,7 @@ class LogInView: UIView, UITextFieldDelegate {
     private func setupSubviews() {
         addSubview(backButton)
         addSubview(logInLabel)
-        addSubview(phoneNumberTF)
+        addSubview(loginTF)
         addSubview(passwordTF)
         addSubview(logInButton)
         addSubview(recoverPasswordButton)
@@ -99,7 +98,7 @@ class LogInView: UIView, UITextFieldDelegate {
             make.top.equalTo(backButton.snp.top)
             make.centerX.equalToSuperview()
         }
-        phoneNumberTF.snp.makeConstraints { make in
+        loginTF.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(190)
             make.centerX.equalToSuperview()
             make.width.equalTo(357)
@@ -107,8 +106,8 @@ class LogInView: UIView, UITextFieldDelegate {
         }
         passwordTF.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.size.equalTo(phoneNumberTF.snp.size)
-            make.top.equalTo(phoneNumberTF.snp.bottom).offset(24)
+            make.size.equalTo(loginTF.snp.size)
+            make.top.equalTo(loginTF.snp.bottom).offset(24)
         }
         logInButton.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(698)
