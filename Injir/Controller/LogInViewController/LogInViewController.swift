@@ -10,6 +10,8 @@ import UIKit
 class LogInViewController: UIViewController {
     
     private let logInView = LogInView()
+    
+    private let viewModel = LogInViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +36,16 @@ class LogInViewController: UIViewController {
     }
     
 }
+//Mark: Auth was OK
 extension LogInViewController {
-    
+    private func logIn() {
+        let mainViewController = MainViewController()
+        // Получаем текущую сцену
+        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            // Заменяем текущий rootViewController на новый для этой сцены
+            scene.windows.first?.rootViewController = mainViewController
+        }
+    }
 }
 
 
@@ -48,6 +58,22 @@ extension LogInViewController {
     
     @objc func logInPressed() {
         let email = logInView.emailTF.text
-        let password = logInView.emailTF.text
+        let password = logInView.passwordTF.text
+        
+        viewModel.setUserInfo(email: email, password: password)
+        let message = viewModel.isCorrectUserInfo()
+        if message == "OK" {
+            viewModel.logInUser { result, error in
+                if error == nil {
+                    if result != nil {
+                        self.logIn()
+                    } else {
+                        print("Ошибка")
+                    }
+                } else {
+                    print(error)
+                }
+            }
+        }
     }
 }

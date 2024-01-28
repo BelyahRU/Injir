@@ -25,22 +25,25 @@ class RegistrationViewModel {
         self.repeatPassword = repeatPassword
     }
     
-    public func isCorrectUserInfo() -> String {
+    public func getDataError() -> String? {
+        //add other messages
         if self.password != self.repeatPassword {
             return "Пароли не совпадают, повторите ввод"
         } else if self.name == "" || self.password == "" ||  self.repeatPassword == "" || self.email == ""{
             return "Не все поля заполнены"
         } else if !(self.email!.contains("@")) {
             return "email заполнен неверно, повторите ввод"
+        } else if self.password!.count < 6 {
+            return "длинна паспорта должна быть не менее 6 символов"
         }
-        return "OK"
+        return nil
     }
     
     public func registerUser(completion: @escaping (AuthDataResult?, Error?) -> Void) {
         Auth.auth().createUser(withEmail: email!, password: password!, completion: completion)
     }
     
-    public func addUserToDatabase(result: AuthDataResult?, error: Error?) -> String{
+    public func addUserToDatabase(result: AuthDataResult?, error: Error?) -> String? {
         if error == nil {
             if let result = result {
                 let ref = Database.database().reference().child("users")
@@ -51,7 +54,11 @@ class RegistrationViewModel {
         } else {
             return "Неизвестная ошибка, error"
         }
-        return "OK"
+        return nil
+    }
+    
+    public func logInUser(completion: @escaping (AuthDataResult?, Error?) -> Void) {
+        Auth.auth().signIn(withEmail: self.email!, password: self.password!, completion: completion)
     }
     
     

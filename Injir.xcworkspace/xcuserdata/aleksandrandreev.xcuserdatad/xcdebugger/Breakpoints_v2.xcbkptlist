@@ -7,17 +7,113 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A5E4DA25-40D4-406D-B42D-2573B8C7E956"
-            shouldBeEnabled = "Yes"
+            uuid = "16AD7805-BC6D-4EF5-B0AB-228146FC9972"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Injir/Controller/RegistrationViewController/RegistrationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "nextPressed()"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "fullRegistration()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "183F43D5-0D6A-4D78-B4A1-4EC125FE03E6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Injir/Controller/RegistrationViewController/RegistrationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "fullRegistration()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "183F43D5-0D6A-4D78-B4A1-4EC125FE03E6 - 615eacbdd5fb5014"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Injir.RegistrationViewController.nextPressed() -&gt; ()"
+                  moduleName = "Injir"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrandreev/Desktop/IOS/Work/Injir/Injir/Controller/RegistrationViewController/RegistrationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "183F43D5-0D6A-4D78-B4A1-4EC125FE03E6 - 615eacbdd5fb5089"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Injir.RegistrationViewController.nextPressed() -&gt; ()"
+                  moduleName = "Injir"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrandreev/Desktop/IOS/Work/Injir/Injir/Controller/RegistrationViewController/RegistrationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31D74835-2C3F-4A93-B40F-E087B4E8232E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Injir/Controller/RegistrationViewController/RegistrationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "registrationUser()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "31D74835-2C3F-4A93-B40F-E087B4E8232E - 6ec829a432f5131c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Injir.RegistrationViewController.registrationUser() -&gt; Swift.String"
+                  moduleName = "Injir"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrandreev/Desktop/IOS/Work/Injir/Injir/Controller/RegistrationViewController/RegistrationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "31D74835-2C3F-4A93-B40F-E087B4E8232E - ac147528574fe8f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Injir.RegistrationViewController.registrationUser() -&gt; Swift.String"
+                  moduleName = "Injir"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrandreev/Desktop/IOS/Work/Injir/Injir/Controller/RegistrationViewController/RegistrationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

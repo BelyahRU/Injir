@@ -148,7 +148,6 @@
 		1A454D442B5C07520057199F /* Injir */ = {
 			isa = PBXGroup;
 			children = (
-				1AAEB7E02B651D7700274454 /* Services */,
 				1A454D7F2B5C0F620057199F /* Support */,
 				1A454D7C2B5C07DE0057199F /* Networking */,
 				1A454D7B2B5C07D40057199F /* Extensions */,
@@ -254,6 +253,7 @@
 		1A454D7F2B5C0F620057199F /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				1AAEB7DE2B651D6400274454 /* GoogleService-Info.plist */,
 				1A454D7D2B5C09390057199F /* .gitignore */,
 				1A454D532B5C07530057199F /* Info.plist */,
 				1A454D452B5C07520057199F /* AppDelegate.swift */,
@@ -285,14 +285,6 @@
 				1AAEB7E42B6535C900274454 /* RegistrationVC+Alert.swift */,
 			);
 			path = RegistrationViewController;
-			sourceTree = "<group>";
-		};
-		1AAEB7E02B651D7700274454 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				1AAEB7DE2B651D6400274454 /* GoogleService-Info.plist */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		1AAEB7E12B65201700274454 /* MainViewController */ = {

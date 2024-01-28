@@ -20,11 +20,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         windowScenee = windowScene
         //обсервер, который следит за тем, авторизован пользователь или нет
-        Auth.auth().addStateDidChangeListener { auth, user in
-            if user == nil {
-                self.userNotAuth()
-            }
-        }
+        print(Auth.auth().currentUser?.email)
+        userNotAuth()
+//        Auth.auth().addStateDidChangeListener { auth, user in
+//            if user == nil {
+//                self.userNotAuth()
+//            } else {
+//                self.userAuth()
+//            }
+//        }
         
         
     }
@@ -39,7 +43,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func userAuth() {
-        
+        window = UIWindow(windowScene: windowScenee!)
+        window?.windowScene = windowScenee
+        window?.makeKeyAndVisible()
+        let mainVC = UINavigationController(rootViewController: MainViewController())
+        mainVC.navigationBar.isHidden = true
+        window?.rootViewController = mainVC
     }
 
 
