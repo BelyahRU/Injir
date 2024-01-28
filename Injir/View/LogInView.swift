@@ -23,9 +23,9 @@ class LogInView: UIView, UITextFieldDelegate {
         return label
     }()
     
-    public let loginTF: UITextField = {
+    public let emailTF: UITextField = {
         let tf = UITextField()
-        tf.generateTF(text: "Введите логин")
+        tf.generateTF(text: "Введите email")
         tf.textContentType = .username
         return tf
     }()
@@ -82,7 +82,7 @@ class LogInView: UIView, UITextFieldDelegate {
     private func setupSubviews() {
         addSubview(backButton)
         addSubview(logInLabel)
-        addSubview(loginTF)
+        addSubview(emailTF)
         addSubview(passwordTF)
         addSubview(logInButton)
         addSubview(recoverPasswordButton)
@@ -98,7 +98,7 @@ class LogInView: UIView, UITextFieldDelegate {
             make.top.equalTo(backButton.snp.top)
             make.centerX.equalToSuperview()
         }
-        loginTF.snp.makeConstraints { make in
+        emailTF.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(190)
             make.centerX.equalToSuperview()
             make.width.equalTo(357)
@@ -106,8 +106,8 @@ class LogInView: UIView, UITextFieldDelegate {
         }
         passwordTF.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.size.equalTo(loginTF.snp.size)
-            make.top.equalTo(loginTF.snp.bottom).offset(24)
+            make.size.equalTo(emailTF.snp.size)
+            make.top.equalTo(emailTF.snp.bottom).offset(24)
         }
         logInButton.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(698)
