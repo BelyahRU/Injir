@@ -30,14 +30,24 @@ class LogInViewController: UIViewController {
     
     private func setupButtons() {
         logInView.backButton.addTarget(self, action: #selector(backPressed), for: .touchUpInside)
+        logInView.logInButton.addTarget(self, action: #selector(logInPressed), for: .touchUpInside)
     }
     
 }
+extension LogInViewController {
+    
+}
+
 
 //MARK: Actions
 extension LogInViewController {
     
     @objc func backPressed() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func logInPressed() {
+        let email = logInView.emailTF.text
+        let password = logInView.emailTF.text
     }
 }

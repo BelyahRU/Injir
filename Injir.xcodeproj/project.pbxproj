@@ -30,7 +30,8 @@
 		1AAEB7DF2B651D6400274454 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AAEB7DE2B651D6400274454 /* GoogleService-Info.plist */; };
 		1AAEB7E32B65205300274454 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB7E22B65205300274454 /* MainViewController.swift */; };
 		1AAEB7E52B6535C900274454 /* RegistrationVC+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB7E42B6535C900274454 /* RegistrationVC+Alert.swift */; };
-		1AAEB7E72B653BC800274454 /* RegistrationVC + dataValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB7E62B653BC800274454 /* RegistrationVC + dataValidation.swift */; };
+		1AAEB7E92B66572100274454 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB7E82B66572100274454 /* RegistrationViewModel.swift */; };
+		1AAEB7EB2B665FF700274454 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB7EA2B665FF700274454 /* LogInViewModel.swift */; };
 		3E11134DC193831A4319F34C /* Pods_Injir_InjirUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C1D3B690F51DCF1E416226 /* Pods_Injir_InjirUITests.framework */; };
 		9A41797E26D28E8D768DB6B2 /* Pods_Injir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633D2AB35EDAAACB3D28D15E /* Pods_Injir.framework */; };
 		F166140E626D05F49B6D86A4 /* Pods_InjirTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C419CF574370620EF13BB8A1 /* Pods_InjirTests.framework */; };
@@ -82,7 +83,8 @@
 		1AAEB7DE2B651D6400274454 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1AAEB7E22B65205300274454 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1AAEB7E42B6535C900274454 /* RegistrationVC+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationVC+Alert.swift"; sourceTree = "<group>"; };
-		1AAEB7E62B653BC800274454 /* RegistrationVC + dataValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationVC + dataValidation.swift"; sourceTree = "<group>"; };
+		1AAEB7E82B66572100274454 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		1AAEB7EA2B665FF700274454 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		3416B8B90DC7A1C0F516A7A7 /* Pods-Injir.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Injir.debug.xcconfig"; path = "Target Support Files/Pods-Injir/Pods-Injir.debug.xcconfig"; sourceTree = "<group>"; };
 		38C1D3B690F51DCF1E416226 /* Pods_Injir_InjirUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Injir_InjirUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D89192ECC1AA8CDD3D609AE /* Pods-Injir-InjirUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Injir-InjirUITests.debug.xcconfig"; path = "Target Support Files/Pods-Injir-InjirUITests/Pods-Injir-InjirUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				1A454DDB2B5FEEE30057199F /* LanguageSelectionViewModel.swift */,
+				1AAEB7E82B66572100274454 /* RegistrationViewModel.swift */,
+				1AAEB7EA2B665FF700274454 /* LogInViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -279,7 +283,6 @@
 			children = (
 				1A454DD42B5E908A0057199F /* RegistrationViewController.swift */,
 				1AAEB7E42B6535C900274454 /* RegistrationVC+Alert.swift */,
-				1AAEB7E62B653BC800274454 /* RegistrationVC + dataValidation.swift */,
 			);
 			path = RegistrationViewController;
 			sourceTree = "<group>";
@@ -570,10 +573,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A454DE02B5FF3560057199F /* HomeViewController.swift in Sources */,
+				1AAEB7E92B66572100274454 /* RegistrationViewModel.swift in Sources */,
 				1A454DDE2B5FF0E40057199F /* Observable.swift in Sources */,
 				1A454DD72B5E909E0057199F /* RegistrationView.swift in Sources */,
 				1A454D462B5C07520057199F /* AppDelegate.swift in Sources */,
-				1AAEB7E72B653BC800274454 /* RegistrationVC + dataValidation.swift in Sources */,
 				1A454D8E2B5C27E20057199F /* LogInView.swift in Sources */,
 				1A454DD22B5E8AA10057199F /* UIButton+Ext.swift in Sources */,
 				1A454D842B5C11F40057199F /* HomeView.swift in Sources */,
@@ -585,6 +588,7 @@
 				1A454D482B5C07520057199F /* SceneDelegate.swift in Sources */,
 				1A454D892B5C13E40057199F /* Resources.swift in Sources */,
 				1A454DDC2B5FEEE30057199F /* LanguageSelectionViewModel.swift in Sources */,
+				1AAEB7EB2B665FF700274454 /* LogInViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,21 +13,15 @@ class RegistrationViewController: UIViewController {
     
     private let registrationView = RegistrationView()
     
-    private var nameTF = UITextField()
-    private var emailTF = UITextField()
-    private var passwordTF = UITextField()
-    private var repeatPasswordTF = UITextField()
-    
+    private let viewModel = RegistrationViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configure()
     }
     
     private func configure() {
         setupView()
-        setupTFs()
         setupButtons()
     }
     
@@ -36,14 +30,6 @@ class RegistrationViewController: UIViewController {
         registrationView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-    }
-    
-    private func setupTFs() {
-        nameTF = registrationView.nameTF
-        emailTF = registrationView.emailTF
-        passwordTF = registrationView.passwordTF
-        repeatPasswordTF = registrationView.repeatPasswordTF
-        
     }
     
     private func setupButtons() {
@@ -61,38 +47,32 @@ extension RegistrationViewController {
     }
     
     @objc func nextPressed() {
-        if isCorrectTFs() {
-            let name = nameTF.text!
-            let email = emailTF.text!
-            let password = passwordTF.text!
-            Auth.auth().createUser(withEmail: email, password: password, completion: { (result, error) in
-                print(error, result)
-                if error == nil {
-                    if let result = result {
-                        print(result.user.uid)
-                        let ref = Database.database().reference().child("users")
-                        ref.child(result.user.uid).updateChildValues(["name": name, "email": email])
+        viewModel.setUserInfo(name: registrationView.nameTF.text,
+                              email: registrationView.emailTF.text,
+                              password: registrationView.passwordTF.text,
+                              repeatPassword: registrationView.repeatPasswordTF.text)
+        
+        var message = viewModel.isCorrectUserInfo()
+        if message == "OK" {
+            viewModel.registerUser { result, error in
+                message = self.viewModel.addUserToDatabase(result: result, error: error)
+                if message == "OK" {
+                    //MARK: user's dockuments
+                    let mainViewController = MainViewController() // Используйте ваш контроллер главного экрана
+
+                    // Получаем текущую сцену
+                    if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                        // Заменяем текущий rootViewController на новый для этой сцены
+                        scene.windows.first?.rootViewController = mainViewController
                     }
+                } else {
+                    self.showAlert(message: message)
                 }
-            })
-        } 
-    }
-}
-//ошибки
-extension RegistrationViewController {
-    
-    private func isCorrectTFs() -> Bool {
-        if passwordTF.text != repeatPasswordTF.text {
-            showAlert(message: "Пароли не совпадают, повторите ввод")
-            return false
-        } else if nameTF.text == "" || passwordTF.text == "" ||  repeatPasswordTF.text == "" || emailTF.text == ""{
-            showAlert(message: "Не все поля заполнены")
-            return false
-        } else if !(emailTF.text?.contains("@"))! {
-            showAlert(message: "email заполнен неверно, повторите ввод")
-            return false
+                
+            }
+        } else {
+            showAlert(message: message)
         }
-        return true
     }
 }
 
