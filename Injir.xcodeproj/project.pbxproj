@@ -126,12 +126,11 @@
 		1A454D392B5C07520057199F = {
 			isa = PBXGroup;
 			children = (
-				1A454D442B5C07520057199F /* Injir */,
-				1A454D5B2B5C07530057199F /* InjirTests */,
-				1A454D652B5C07530057199F /* InjirUITests */,
 				1A454D432B5C07520057199F /* Products */,
 				D67524B66045FF5226F971E2 /* Pods */,
 				B41098D7952125D9CB66BC71 /* Frameworks */,
+				1AAEB7EF2B6910AD00274454 /* Other */,
+				1A454D442B5C07520057199F /* Injir */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,13 +147,7 @@
 		1A454D442B5C07520057199F /* Injir */ = {
 			isa = PBXGroup;
 			children = (
-				1A454D7F2B5C0F620057199F /* Support */,
-				1A454D7C2B5C07DE0057199F /* Networking */,
-				1A454D7B2B5C07D40057199F /* Extensions */,
-				1A454D7A2B5C07C30057199F /* Resources */,
-				1A454D792B5C07BA0057199F /* Classes */,
 				1A454D782B5C07B30057199F /* Model */,
-				1A454D772B5C07A50057199F /* Controller */,
 				1A454D762B5C07920057199F /* ViewModel */,
 				1A454D752B5C078C0057199F /* View */,
 			);
@@ -181,9 +174,11 @@
 		1A454D752B5C078C0057199F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1A454D8D2B5C27E20057199F /* LogInView.swift */,
-				1A454DD62B5E909E0057199F /* RegistrationView.swift */,
-				1A454D832B5C11F40057199F /* HomeView.swift */,
+				1A454D7B2B5C07D40057199F /* Extensions */,
+				1A454D822B5C11D90057199F /* HomeViewController */,
+				1AAEB7E12B65201700274454 /* MainViewController */,
+				1A454DD32B5E90710057199F /* RegistrationViewController */,
+				1A454D8A2B5C231A0057199F /* LogInViewController */,
 				1A454D502B5C07530057199F /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -199,20 +194,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		1A454D772B5C07A50057199F /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				1AAEB7E12B65201700274454 /* MainViewController */,
-				1A454DD32B5E90710057199F /* RegistrationViewController */,
-				1A454D8A2B5C231A0057199F /* LogInViewController */,
-				1A454D822B5C11D90057199F /* HomeViewController */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		1A454D782B5C07B30057199F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1A454D7F2B5C0F620057199F /* Support */,
+				1A454D7C2B5C07DE0057199F /* Networking */,
+				1A454D7A2B5C07C30057199F /* Resources */,
+				1A454D792B5C07BA0057199F /* Classes */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,6 +253,7 @@
 		1A454D822B5C11D90057199F /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1A454D832B5C11F40057199F /* HomeView.swift */,
 				1A454DDF2B5FF3560057199F /* HomeViewController.swift */,
 			);
 			path = HomeViewController;
@@ -273,6 +262,7 @@
 		1A454D8A2B5C231A0057199F /* LogInViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1A454D8D2B5C27E20057199F /* LogInView.swift */,
 				1A454D8B2B5C233A0057199F /* LogInViewController.swift */,
 			);
 			path = LogInViewController;
@@ -281,6 +271,7 @@
 		1A454DD32B5E90710057199F /* RegistrationViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1A454DD62B5E909E0057199F /* RegistrationView.swift */,
 				1A454DD42B5E908A0057199F /* RegistrationViewController.swift */,
 				1AAEB7E42B6535C900274454 /* RegistrationVC+Alert.swift */,
 			);
@@ -293,6 +284,15 @@
 				1AAEB7E22B65205300274454 /* MainViewController.swift */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		1AAEB7EF2B6910AD00274454 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1A454D5B2B5C07530057199F /* InjirTests */,
+				1A454D652B5C07530057199F /* InjirUITests */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		B41098D7952125D9CB66BC71 /* Frameworks */ = {
@@ -751,7 +751,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Injir/Support/Info.plist;
+				INFOPLIST_FILE = Injir/Model/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -778,7 +778,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Injir/Support/Info.plist;
+				INFOPLIST_FILE = Injir/Model/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
