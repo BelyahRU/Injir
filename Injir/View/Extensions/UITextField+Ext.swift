@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 extension UITextField: UITextFieldDelegate {
+    
+    
     func generateTF(text: String) {
         // Устанавливаем отступ и цвет placeholder
         let paragraphStyle = NSMutableParagraphStyle()

@@ -39,7 +39,7 @@ class LogInViewController: UIViewController {
 //Mark: Auth was OK
 extension LogInViewController {
     private func logIn() {
-        let mainViewController = MainViewController()
+        let mainViewController = MainTabBarViewController()
         // Получаем текущую сцену
         if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
             // Заменяем текущий rootViewController на новый для этой сцены

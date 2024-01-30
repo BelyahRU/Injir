@@ -60,7 +60,10 @@ class RegistrationView: UIView {
     
     public let nextButton: UIButton = {
         let button = UIButton()
-        button.generatePurpleButton(text: "Далее")
+        button.createPurpleTitle(text: "Далее")
+        button.makeBorders(width: 3)
+        button.makeRadius(radius: 21)
+        button.makeBordersColor(color: Resources.Colors.purpleCGColor)
         return button
     }()
     

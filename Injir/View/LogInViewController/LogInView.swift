@@ -41,7 +41,10 @@ class LogInView: UIView, UITextFieldDelegate {
     
     public let logInButton: UIButton = {
         let button = UIButton()
-        button.generatePurpleButton(text: "Войти")
+        button.createPurpleTitle(text: "Войти")
+        button.makeBorders(width: 3)
+        button.makeRadius(radius: 21)
+        button.makeBordersColor(color: Resources.Colors.purpleCGColor)
         return button
     }()
     
