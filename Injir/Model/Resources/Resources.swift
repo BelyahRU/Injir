@@ -19,6 +19,7 @@ enum Resources {
     
     enum Images {
         static let logoImage = "logo"
+        static let avatarImage = "avatar"
     }
     
     enum Buttons {

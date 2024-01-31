@@ -9,6 +9,14 @@ import UIKit
 
 class ProfileView: UIView {
     
+    private let profileLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Профиль"
+        label.font = UIFont.systemFont(ofSize: 25, weight: .medium)
+        label.textColor = Resources.Colors.purpleColor
+        return label
+    }()
+    
     public let logOutButton: UIButton = {
         let button = UIButton()
         button.makeBorders(width: 3)
@@ -18,32 +26,19 @@ class ProfileView: UIView {
         button.setTitleColor(UIColor(red: 0.683, green: 0.193, blue: 0.193, alpha: 1), for: .normal)
         return button
     }()
-    
-    private let professionLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Профессия"
-        label.textColor = Resources.Colors.purpleColor
-        label.font = UIFont.systemFont(ofSize: 17)
-        return label
-    }()
-    
-    public let professionView: UIView = {
-        let view = UIView()
-        view.makeBorders(width: 3)
-        view.makeRadius(radius: 22.5)
-        view.makeBordersColor(color: Resources.Colors.purpleCGColor)
-        return view
-    }()
-    
-    
-    public let informationAboutUserView: UIView = {
-        let view = UIView()
-        view.makeBorders(width: 3)
-        view.makeBordersColor(color: Resources.Colors.purpleCGColor)
-        view.makeRadius(radius: 22.5)
-        return view
-    }()
 
+    //MARK: INFO about user
+    public let informationAboutUserView = InformationAboutUserView()
+    
+    public let avatarImageView: UIImageView = {
+        let im = UIImageView()
+        im.image = UIImage(named: "avatar")
+        im.layer.cornerRadius = 129/2
+        im.clipsToBounds = true
+        return im
+    }()
+    //MARK: User's data
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -59,14 +54,17 @@ class ProfileView: UIView {
     }
     
     private func setupSubviews() {
+        addSubview(profileLabel)
         addSubview(logOutButton)
         addSubview(informationAboutUserView)
-        
-        informationAboutUserView.addSubview(professionLabel)
-        informationAboutUserView.addSubview(professionView)
+        addSubview(avatarImageView)
     }
     
     private func setupConstraints() {
+        profileLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(82)
+            make.centerX.equalToSuperview()
+        }
         logOutButton.snp.makeConstraints { make in
             make.width.equalTo(211)
             make.height.equalTo(44)
@@ -81,18 +79,11 @@ class ProfileView: UIView {
             make.height.equalTo(210)
         }
         
-        professionView.snp.makeConstraints { make in
+        avatarImageView.snp.makeConstraints { make in
+            make.size.equalTo(129)
+            make.centerY.equalTo(informationAboutUserView.snp.top)
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().offset(152)
-            make.width.equalTo(335)
-            make.height.equalTo(47)
         }
-        
-        professionLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(119)
-            make.leading.equalToSuperview().offset(11)
-        }
-        
     }
     
     

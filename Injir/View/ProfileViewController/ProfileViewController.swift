@@ -11,7 +11,7 @@ class ProfileViewController: UIViewController {
     
     weak var delegate: ProfileViewControllerDelegate?
     
-    private let profileView = ProfileView()
+    public let profileView = ProfileView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,8 @@ class ProfileViewController: UIViewController {
     
     private func setupButtons() {
         profileView.logOutButton.addTarget(self, action: #selector(logOut), for: .touchUpInside)
+        profileView.informationAboutUserView.editNameButton.addTarget(self, action: #selector(editName), for: .touchUpInside)
+        profileView.informationAboutUserView.editProfessionButton.addTarget(self, action: #selector(editProfession), for: .touchUpInside)
     }
 }
 
@@ -39,5 +41,18 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController {
     @objc func logOut() {
         delegate?.logOutButtonTapped()
+    }
+    
+    @objc func editName() {
+        self.showAlert(title: "Имя") { newName in
+            self.profileView.informationAboutUserView.nameLabel.text = newName
+        }
+    }
+    
+    @objc func editProfession() {
+        self.showAlert(title: "Профессия") { newProfession in
+            self.profileView.informationAboutUserView.nameOfProfessionLabel.text = newProfession
+        }
+
     }
 }

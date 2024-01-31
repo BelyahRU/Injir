@@ -14,8 +14,8 @@
             filePath = "Injir/View/ProfileViewController/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "logOut()"
             landmarkType = "7">
             <Locations>
@@ -48,6 +48,54 @@
                   startingLineNumber = "41"
                   endingLineNumber = "41"
                   offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06070C18-FDF7-4B0C-9E31-9FD91ACEEFA9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Injir/View/ProfileViewController/ProfileViewController+Alert.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "showAlert(title:competition:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "06070C18-FDF7-4B0C-9E31-9FD91ACEEFA9 - 5b9d554b6a7ef887"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Injir.ProfileViewController.showAlert(title: Swift.String) -&gt; Swift.String"
+                  moduleName = "Injir"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrandreev/Desktop/IOS/Work/Injir/Injir/View/ProfileViewController/ProfileViewController+Alert.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "06070C18-FDF7-4B0C-9E31-9FD91ACEEFA9 - ff894d995efe1179"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Injir.ProfileViewController.showAlert(title: Swift.String, competition: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "Injir"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrandreev/Desktop/IOS/Work/Injir/Injir/View/ProfileViewController/ProfileViewController+Alert.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "172">
                </Location>
             </Locations>
          </BreakpointContent>
