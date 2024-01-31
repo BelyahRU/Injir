@@ -18,6 +18,31 @@ class ProfileView: UIView {
         button.setTitleColor(UIColor(red: 0.683, green: 0.193, blue: 0.193, alpha: 1), for: .normal)
         return button
     }()
+    
+    private let professionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Профессия"
+        label.textColor = Resources.Colors.purpleColor
+        label.font = UIFont.systemFont(ofSize: 17)
+        return label
+    }()
+    
+    public let professionView: UIView = {
+        let view = UIView()
+        view.makeBorders(width: 3)
+        view.makeRadius(radius: 22.5)
+        view.makeBordersColor(color: Resources.Colors.purpleCGColor)
+        return view
+    }()
+    
+    
+    public let informationAboutUserView: UIView = {
+        let view = UIView()
+        view.makeBorders(width: 3)
+        view.makeBordersColor(color: Resources.Colors.purpleCGColor)
+        view.makeRadius(radius: 22.5)
+        return view
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,6 +60,10 @@ class ProfileView: UIView {
     
     private func setupSubviews() {
         addSubview(logOutButton)
+        addSubview(informationAboutUserView)
+        
+        informationAboutUserView.addSubview(professionLabel)
+        informationAboutUserView.addSubview(professionView)
     }
     
     private func setupConstraints() {
@@ -44,6 +73,28 @@ class ProfileView: UIView {
             make.centerX.equalToSuperview()
             make.bottom.equalToSuperview().inset(213)
         }
+        
+        informationAboutUserView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(224)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(357)
+            make.height.equalTo(210)
+        }
+        
+        professionView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(152)
+            make.width.equalTo(335)
+            make.height.equalTo(47)
+        }
+        
+        professionLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(119)
+            make.leading.equalToSuperview().offset(11)
+        }
+        
     }
+    
+    
 
 }

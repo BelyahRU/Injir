@@ -3,4 +3,54 @@
    uuid = "D6D5B4C0-E07B-466F-B02C-F1B7858805F7"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80CAC5FA-DBD2-4F5D-BA8B-2438A62ED981"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Injir/View/ProfileViewController/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "logOut()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "80CAC5FA-DBD2-4F5D-BA8B-2438A62ED981 - 5bef3e2f67bfe0e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Injir.ProfileViewController.logOut() -&gt; ()"
+                  moduleName = "Injir"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrandreev/Desktop/IOS/Work/Injir/Injir/View/ProfileViewController/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "80CAC5FA-DBD2-4F5D-BA8B-2438A62ED981 - 5bef3e2f67bfe36c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Injir.ProfileViewController.logOut() -&gt; ()"
+                  moduleName = "Injir"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrandreev/Desktop/IOS/Work/Injir/Injir/View/ProfileViewController/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -9,6 +9,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    weak var delegate: ProfileViewControllerDelegate?
+    
     private let profileView = ProfileView()
 
     override func viewDidLoad() {
@@ -36,6 +38,6 @@ class ProfileViewController: UIViewController {
 //MARK: Actions
 extension ProfileViewController {
     @objc func logOut() {
-        
+        delegate?.logOutButtonTapped()
     }
 }

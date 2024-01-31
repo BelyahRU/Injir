@@ -23,6 +23,7 @@ enum Resources {
     
     enum Buttons {
         static let backButton = "backArrow"
+        static let editButton = "editImage"
         
     }
     

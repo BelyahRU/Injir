@@ -7,7 +7,13 @@
 
 import UIKit
 
-class MainTabBarViewController: UITabBarController {
+protocol ProfileViewControllerDelegate: AnyObject {
+    func logOutButtonTapped()
+}
+
+class MainTabBarViewController: UITabBarController, ProfileViewControllerDelegate {
+    
+    weak var mainDelegate: MainTabBarControllerDelegate?
     
     private let customTabBarView: UIView = {
         let view = UIView()
@@ -54,12 +60,18 @@ class MainTabBarViewController: UITabBarController {
         }
     }
     
+    func logOutButtonTapped() {
+        mainDelegate?.logOutUser()
+        print("OK")
+    }
+    
 }
 
 //Settings For TabBar
 extension MainTabBarViewController {
     private func generateTabBar() {
         let profileVC = ProfileViewController()
+        profileVC.delegate = self
         let servicesVC = ServicesViewController()
         let newsVC = NewsViewController()
         
