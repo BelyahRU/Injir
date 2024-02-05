@@ -22,10 +22,11 @@ class HomeView: UIView {
     
     public let logInButton: UIButton = {
         let button = UIButton()
-        button.layer.borderColor = Resources.Colors.whiteCGColor
         button.backgroundColor = .clear
-        button.layer.borderWidth = 3
-        button.layer.cornerRadius = 21
+        button.titleLabel?.tintColor = .white
+        button.makeBorders(width: 3)
+        button.makeRadius(radius: 21)
+        button.makeBordersColor(color: Resources.Colors.whiteCGColor)
         button.setTitle("Войти", for: .normal)
         button.contentHorizontalAlignment = .left
         button.configuration = UIButton.Configuration.plain()
@@ -35,11 +36,12 @@ class HomeView: UIView {
     }()
     
     public let registrationButton: UIButton = {
-        let button = UIButton()
-        button.layer.borderColor = Resources.Colors.whiteCGColor
+        let button = UIButton(type: .system)
+        button.configuration = UIButton.Configuration.plain()
         button.backgroundColor = .clear
-        button.layer.borderWidth = 3
-        button.layer.cornerRadius = 21
+        button.makeBorders(width: 3)
+        button.makeRadius(radius: 21)
+        button.makeBordersColor(color: Resources.Colors.whiteCGColor)
         button.setTitle("Регистрация", for: .normal)
         button.contentHorizontalAlignment = .left
         button.configuration = UIButton.Configuration.plain()

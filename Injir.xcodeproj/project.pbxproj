@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A174CAA2B6BFA8F00B30D7B /* UsersDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CA92B6BFA8F00B30D7B /* UsersDataView.swift */; };
+		1A174CAD2B6C091F00B30D7B /* PassportDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CAC2B6C091F00B30D7B /* PassportDataViewController.swift */; };
+		1A174CAF2B6C093B00B30D7B /* PassportDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CAE2B6C093B00B30D7B /* PassportDataView.swift */; };
+		1A174CB22B6C0C8600B30D7B /* PassportDataStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CB12B6C0C8600B30D7B /* PassportDataStackView.swift */; };
+		1A174CB42B6C0CA200B30D7B /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CB32B6C0CA200B30D7B /* CustomStackView.swift */; };
 		1A454D462B5C07520057199F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D452B5C07520057199F /* AppDelegate.swift */; };
 		1A454D482B5C07520057199F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D472B5C07520057199F /* SceneDelegate.swift */; };
 		1A454D4F2B5C07530057199F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A454D4E2B5C07530057199F /* Assets.xcassets */; };
@@ -64,6 +69,11 @@
 /* Begin PBXFileReference section */
 		09F24023171166FF383313DF /* Pods-InjirTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InjirTests.debug.xcconfig"; path = "Target Support Files/Pods-InjirTests/Pods-InjirTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0F3917EF49E161E54E5A0803 /* Pods-Injir-InjirUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Injir-InjirUITests.release.xcconfig"; path = "Target Support Files/Pods-Injir-InjirUITests/Pods-Injir-InjirUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1A174CA92B6BFA8F00B30D7B /* UsersDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataView.swift; sourceTree = "<group>"; };
+		1A174CAC2B6C091F00B30D7B /* PassportDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportDataViewController.swift; sourceTree = "<group>"; };
+		1A174CAE2B6C093B00B30D7B /* PassportDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportDataView.swift; sourceTree = "<group>"; };
+		1A174CB12B6C0C8600B30D7B /* PassportDataStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportDataStackView.swift; sourceTree = "<group>"; };
+		1A174CB32B6C0CA200B30D7B /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
 		1A454D422B5C07520057199F /* Injir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Injir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A454D452B5C07520057199F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A454D472B5C07520057199F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +147,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A174CAB2B6C08FD00B30D7B /* PassportDataViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A174CB02B6C0C4A00B30D7B /* PassportDataStackView */,
+				1A174CAC2B6C091F00B30D7B /* PassportDataViewController.swift */,
+				1A174CAE2B6C093B00B30D7B /* PassportDataView.swift */,
+			);
+			path = PassportDataViewController;
+			sourceTree = "<group>";
+		};
+		1A174CB02B6C0C4A00B30D7B /* PassportDataStackView */ = {
+			isa = PBXGroup;
+			children = (
+				1A174CB12B6C0C8600B30D7B /* PassportDataStackView.swift */,
+			);
+			path = PassportDataStackView;
+			sourceTree = "<group>";
+		};
 		1A454D392B5C07520057199F = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +216,9 @@
 		1A454D752B5C078C0057199F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A174CB32B6C0CA200B30D7B /* CustomStackView.swift */,
 				1A454D7B2B5C07D40057199F /* Extensions */,
+				1A174CAB2B6C08FD00B30D7B /* PassportDataViewController */,
 				1AAEB7F22B69191900274454 /* ProfileViewController */,
 				1AAEB7F12B69190D00274454 /* ServicesViewController */,
 				1AAEB7F02B69190100274454 /* NewsViewController */,
@@ -336,6 +366,7 @@
 				1AAEB8012B6A8E4000274454 /* ProfileViewController+Alert.swift */,
 				1AAEB7FB2B6929B200274454 /* ProfileView.swift */,
 				1AAEB7FF2B6A839E00274454 /* InformationAboutUserView.swift */,
+				1A174CA92B6BFA8F00B30D7B /* UsersDataView.swift */,
 			);
 			path = ProfileViewController;
 			sourceTree = "<group>";
@@ -609,12 +640,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A174CAD2B6C091F00B30D7B /* PassportDataViewController.swift in Sources */,
 				1A454DE02B5FF3560057199F /* HomeViewController.swift in Sources */,
 				1AAEB7E92B66572100274454 /* RegistrationViewModel.swift in Sources */,
 				1AAEB7F62B69193E00274454 /* ServicesViewController.swift in Sources */,
 				1AAEB7F82B69194700274454 /* NewsViewController.swift in Sources */,
+				1A174CB22B6C0C8600B30D7B /* PassportDataStackView.swift in Sources */,
+				1A174CAF2B6C093B00B30D7B /* PassportDataView.swift in Sources */,
 				1A454DDE2B5FF0E40057199F /* Observable.swift in Sources */,
 				1A454DD72B5E909E0057199F /* RegistrationView.swift in Sources */,
+				1A174CB42B6C0CA200B30D7B /* CustomStackView.swift in Sources */,
 				1A454D462B5C07520057199F /* AppDelegate.swift in Sources */,
 				1A454D8E2B5C27E20057199F /* LogInView.swift in Sources */,
 				1AAEB7F42B69193200274454 /* ProfileViewController.swift in Sources */,
@@ -632,6 +667,7 @@
 				1AAEB7FC2B6929B200274454 /* ProfileView.swift in Sources */,
 				1AAEB7EB2B665FF700274454 /* LogInViewModel.swift in Sources */,
 				1AAEB8002B6A839E00274454 /* InformationAboutUserView.swift in Sources */,
+				1A174CAA2B6BFA8F00B30D7B /* UsersDataView.swift in Sources */,
 				1AAEB8022B6A8E4000274454 /* ProfileViewController+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

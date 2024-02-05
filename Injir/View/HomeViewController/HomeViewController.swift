@@ -83,6 +83,7 @@ extension HomeViewController {
 
 //MARK: Actions
 extension HomeViewController {
+    
     @objc func logInPressed() {
         let logInVC = LogInViewController()
         navigationController?.pushViewController(logInVC, animated: true)

@@ -38,6 +38,7 @@ class ProfileView: UIView {
         return im
     }()
     //MARK: User's data
+    public let usersDataView = UsersDataView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -58,6 +59,7 @@ class ProfileView: UIView {
         addSubview(logOutButton)
         addSubview(informationAboutUserView)
         addSubview(avatarImageView)
+        addSubview(usersDataView)
     }
     
     private func setupConstraints() {
@@ -82,6 +84,13 @@ class ProfileView: UIView {
         avatarImageView.snp.makeConstraints { make in
             make.size.equalTo(129)
             make.centerY.equalTo(informationAboutUserView.snp.top)
+            make.centerX.equalToSuperview()
+        }
+        
+        usersDataView.snp.makeConstraints { make in
+            make.width.equalTo(357)
+            make.height.equalTo(135)
+            make.top.equalTo(informationAboutUserView.snp.bottom).offset(13)
             make.centerX.equalToSuperview()
         }
     }
