@@ -67,7 +67,7 @@ extension ProfileViewController {
     }
     
     @objc func checkRegistrationAndPatent() {
-        
+        navigationController?.pushViewController(RegistationAndPatentViewController(), animated: false)
     }
     
     @objc func checkContact() {

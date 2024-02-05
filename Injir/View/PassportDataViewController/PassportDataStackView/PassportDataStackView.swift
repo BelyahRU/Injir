@@ -9,11 +9,11 @@ import UIKit
 
 class PassportDataStackView: UIStackView {
 
-    public let seriaAndNumberSV = CustomStackView()
-    public let dateOfBithSV = CustomStackView()
-    public let placeOfBithSV = CustomStackView()
-    public let dateOfIssueSV = CustomStackView()
-    public let organSV = CustomStackView()
+    public let seriaAndNumberSV = CustomStackView(topicText: "Cерия и номер", data: "-")
+    public let dateOfBithSV = CustomStackView(topicText: "Дата рождения", data: "-")
+    public let placeOfBithSV = CustomStackView(topicText: "Место рождения", data: "-")
+    public let dateOfIssueSV = CustomStackView(topicText: "Дата выдачи паспорта", data: "-")
+    public let organSV = CustomStackView(topicText: "Орган выдавший паспорт", data: "-")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,7 +26,6 @@ class PassportDataStackView: UIStackView {
     
     private func configure() {
         settingsForView()
-        setupSVs()
         setupSubviews()
         setupConstraints()
     }
@@ -36,13 +35,6 @@ class PassportDataStackView: UIStackView {
         axis = .vertical
     }
     
-    private func setupSVs() {
-        seriaAndNumberSV.setupLabels(topicText: "Cерия и номер", data: "Cерия и номер")
-        dateOfBithSV.setupLabels(topicText: "Дата рождения", data: "Дата рождения")
-        placeOfBithSV.setupLabels(topicText: "Место рождения", data: "Место рождения")
-        dateOfIssueSV.setupLabels(topicText: "Дата выдачи паспорта", data: "Дата выдачи паспорта")
-        organSV.setupLabels(topicText: "Орган выдавший паспорт", data: "Орган выдавший паспорт")
-    }
     
     private func setupSubviews() {
         addArrangedSubview(seriaAndNumberSV)

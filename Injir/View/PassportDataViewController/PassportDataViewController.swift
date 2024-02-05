@@ -10,6 +10,7 @@ import UIKit
 class PassportDataViewController: UIViewController {
     
     private let passportDataView = PassportDataView()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,7 @@ class PassportDataViewController: UIViewController {
     
     private func configure() {
         setupView()
+        setupButtons()
     }
     
     private func setupView() {
@@ -27,5 +29,16 @@ class PassportDataViewController: UIViewController {
             make.edges.equalToSuperview()
         }
     }
+    
+    private func setupButtons() {
+        passportDataView.backButton.addTarget(self, action: #selector(backPressed), for: .touchUpInside)
+    }
 
+}
+
+extension PassportDataViewController {
+    
+    @objc func backPressed() {
+        navigationController?.popViewController(animated: false)
+    }
 }

@@ -12,6 +12,9 @@
 		1A174CAF2B6C093B00B30D7B /* PassportDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CAE2B6C093B00B30D7B /* PassportDataView.swift */; };
 		1A174CB22B6C0C8600B30D7B /* PassportDataStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CB12B6C0C8600B30D7B /* PassportDataStackView.swift */; };
 		1A174CB42B6C0CA200B30D7B /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CB32B6C0CA200B30D7B /* CustomStackView.swift */; };
+		1A174CBF2B71198600B30D7B /* RegistationAndPatentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CBE2B71198600B30D7B /* RegistationAndPatentViewController.swift */; };
+		1A174CC12B7119A300B30D7B /* RegistrationAndPatentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CC02B7119A300B30D7B /* RegistrationAndPatentView.swift */; };
+		1A174CC32B711C8900B30D7B /* RegitrationAndPatentDataSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CC22B711C8900B30D7B /* RegitrationAndPatentDataSV.swift */; };
 		1A454D462B5C07520057199F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D452B5C07520057199F /* AppDelegate.swift */; };
 		1A454D482B5C07520057199F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D472B5C07520057199F /* SceneDelegate.swift */; };
 		1A454D4F2B5C07530057199F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A454D4E2B5C07530057199F /* Assets.xcassets */; };
@@ -74,6 +77,9 @@
 		1A174CAE2B6C093B00B30D7B /* PassportDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportDataView.swift; sourceTree = "<group>"; };
 		1A174CB12B6C0C8600B30D7B /* PassportDataStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportDataStackView.swift; sourceTree = "<group>"; };
 		1A174CB32B6C0CA200B30D7B /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
+		1A174CBE2B71198600B30D7B /* RegistationAndPatentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistationAndPatentViewController.swift; sourceTree = "<group>"; };
+		1A174CC02B7119A300B30D7B /* RegistrationAndPatentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAndPatentView.swift; sourceTree = "<group>"; };
+		1A174CC22B711C8900B30D7B /* RegitrationAndPatentDataSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegitrationAndPatentDataSV.swift; sourceTree = "<group>"; };
 		1A454D422B5C07520057199F /* Injir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Injir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A454D452B5C07520057199F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A454D472B5C07520057199F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +171,16 @@
 			path = PassportDataStackView;
 			sourceTree = "<group>";
 		};
+		1A174CBD2B71195100B30D7B /* RegistrationAndPatentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A174CBE2B71198600B30D7B /* RegistationAndPatentViewController.swift */,
+				1A174CC02B7119A300B30D7B /* RegistrationAndPatentView.swift */,
+				1A174CC22B711C8900B30D7B /* RegitrationAndPatentDataSV.swift */,
+			);
+			path = RegistrationAndPatentViewController;
+			sourceTree = "<group>";
+		};
 		1A454D392B5C07520057199F = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +234,7 @@
 			children = (
 				1A174CB32B6C0CA200B30D7B /* CustomStackView.swift */,
 				1A454D7B2B5C07D40057199F /* Extensions */,
+				1A174CBD2B71195100B30D7B /* RegistrationAndPatentViewController */,
 				1A174CAB2B6C08FD00B30D7B /* PassportDataViewController */,
 				1AAEB7F22B69191900274454 /* ProfileViewController */,
 				1AAEB7F12B69190D00274454 /* ServicesViewController */,
@@ -650,10 +667,12 @@
 				1A454DDE2B5FF0E40057199F /* Observable.swift in Sources */,
 				1A454DD72B5E909E0057199F /* RegistrationView.swift in Sources */,
 				1A174CB42B6C0CA200B30D7B /* CustomStackView.swift in Sources */,
+				1A174CC32B711C8900B30D7B /* RegitrationAndPatentDataSV.swift in Sources */,
 				1A454D462B5C07520057199F /* AppDelegate.swift in Sources */,
 				1A454D8E2B5C27E20057199F /* LogInView.swift in Sources */,
 				1AAEB7F42B69193200274454 /* ProfileViewController.swift in Sources */,
 				1A454DD22B5E8AA10057199F /* UIButton+Ext.swift in Sources */,
+				1A174CBF2B71198600B30D7B /* RegistationAndPatentViewController.swift in Sources */,
 				1A454D842B5C11F40057199F /* HomeView.swift in Sources */,
 				1AAEB7FA2B6923EA00274454 /* UIView+Ext.swift in Sources */,
 				1AAEB7E32B65205300274454 /* MainTabBarViewController.swift in Sources */,
@@ -666,6 +685,7 @@
 				1A454DDC2B5FEEE30057199F /* LanguageSelectionViewModel.swift in Sources */,
 				1AAEB7FC2B6929B200274454 /* ProfileView.swift in Sources */,
 				1AAEB7EB2B665FF700274454 /* LogInViewModel.swift in Sources */,
+				1A174CC12B7119A300B30D7B /* RegistrationAndPatentView.swift in Sources */,
 				1AAEB8002B6A839E00274454 /* InformationAboutUserView.swift in Sources */,
 				1A174CAA2B6BFA8F00B30D7B /* UsersDataView.swift in Sources */,
 				1AAEB8022B6A8E4000274454 /* ProfileViewController+Alert.swift in Sources */,

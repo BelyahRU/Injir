@@ -30,19 +30,16 @@ class CustomStackView: UIStackView {
         label.font = UIFont.systemFont(ofSize: 17)
         return label
     }()
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    
+    init(topicText: String, data: String) {
+        super.init(frame: .zero)
+        topicLabel.text = topicText
+        currentText.text = data
         configure()
     }
     
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    public func setupLabels(topicText: String, data: String) {
-        topicLabel.text = topicText
-        currentText.text = data
     }
     
     private func configure() {
