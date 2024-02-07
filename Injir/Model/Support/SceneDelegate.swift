@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseCore
+import FirebaseDatabase
 
 protocol MainTabBarControllerDelegate: AnyObject {
     func logOutUser()
@@ -23,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, MainTabBarControllerDel
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         windowScenee = windowScene
+        
         Auth.auth().addStateDidChangeListener { auth, user in
             if user == nil {
                 self.userNotAuth()

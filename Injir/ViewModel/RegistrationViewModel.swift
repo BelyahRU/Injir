@@ -26,7 +26,7 @@ class RegistrationViewModel {
     }
     
     public func getDataError() -> String? {
-        //add other messages
+        //add other errors
         if self.password != self.repeatPassword {
             return "Пароли не совпадают, повторите ввод"
         } else if self.name == "" || self.password == "" ||  self.repeatPassword == "" || self.email == ""{
@@ -44,36 +44,36 @@ class RegistrationViewModel {
     }
     
     public func addUserToDatabase(result: AuthDataResult?, error: Error?) -> String? {
-        if error == nil {
-            if let result = result {
-                let ref = Database.database().reference().child("users")
-                
-                let passportData = createPassportData()
-                let contactData = createContactData()
-                let registrationAndPatentData = createRegistrationAndPatentData()
-                
-                
-                
-                print("Before updating data in database")
-                ref.child(result.user.uid).updateChildValues(["name": self.name!, "email": self.email!, "password": self.password!, "passportData": passportData, "contactData": contactData, "registrationAndPatentData": registrationAndPatentData]) { (error, reference) in
-                    if let error = error {
-                        // Обработка ошибки
-                        print("Ошибка при обновлении данных: \(error.localizedDescription)")
-                    } else {
-                        // Данные успешно обновлены
-                        print("Данные успешно обновлены в базе данных")
-                    }
-                }
-                print("After updating data in database")
-
-
-                
-            } else {
-                return "Неизвестная ошибка, result"
-            }
-        } else {
-            return "Неизвестная ошибка, error"
+        guard error == nil else {
+            return "Неизвестная ошибка, \(error!.localizedDescription)"
         }
+        
+        guard let result = result else {
+            return "Неизвестная ошибка, result"
+        }
+        
+        let ref = Database.database().reference().child("users")
+        let passportData = createPassportData()
+        let contactData = createContactData()
+        let registrationAndPatentData = createRegistrationAndPatentData()
+        
+        ref.child(result.user.uid).updateChildValues([
+            "name": self.name ?? "",
+            "email": self.email ?? "",
+            "password": self.password ?? "",
+            "passportData": passportData,
+            "contactData": contactData,
+            "registrationAndPatentData": registrationAndPatentData
+        ]) { (error, reference) in
+            if let error = error {
+                // Обработка ошибки
+                print("Ошибка при обновлении данных: \(error.localizedDescription)")
+            } else {
+                // Данные успешно обновлены
+                print("Данные успешно обновлены в базе данных")
+            }
+        }
+        
         return nil
     }
     
@@ -82,6 +82,8 @@ class RegistrationViewModel {
     }
     
     public func createPassportData() -> [String: String]{
+        let passport = PassportData(seriaAndNumber: "-", dateOfBirth: "-", placeOfBirth: "-", dateOfIssue: "-", organ: "-")
+        
         let passportDataArray: [String: String] = [
             "seriaAndNumber":"-",
             "dateOfBith":"-",
