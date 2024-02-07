@@ -20,19 +20,34 @@ enum Resources {
     enum Images {
         static let logoImage = "logo"
         static let avatarImage = "avatar"
+        static let separatorLine = "separatorLine"
     }
     
     enum Buttons {
         static let backButton = "backArrow"
         static let editButton = "editImage"
         static let checkButton = "checkArrow"
-        
+        static let swapCitiesButton = "swapCities"
     }
     
     enum TabBarItems {
         static let newsIcon = "newsSelected"
         static let servicesIcon = "servicesSelected"
         static let profileIcon = "profileSelected"
+        static let biletsIcon = "biletsSelected"
+    }
+    
+    enum BiletsIcons {
+        enum Selected {
+            static let planeIcon = "planeSelected"
+            static let busIcon = "busSelected"
+            static let trainIcon = "trainSelected"
+        }
+        enum Unselected {
+            static let planeIcon = "planeIcon"
+            static let busIcon = "busIcon"
+            static let trainIcon = "trainIcon"
+        }
     }
     
 }

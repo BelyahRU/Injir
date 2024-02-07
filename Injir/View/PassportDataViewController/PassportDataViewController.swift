@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class PassportDataViewController: UIViewController {
     
@@ -14,7 +15,6 @@ class PassportDataViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configure()
     }
     
@@ -25,6 +25,7 @@ class PassportDataViewController: UIViewController {
     
     private func setupView() {
         view.addSubview(passportDataView)
+        
         passportDataView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }

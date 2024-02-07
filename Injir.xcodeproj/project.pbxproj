@@ -15,6 +15,13 @@
 		1A174CBF2B71198600B30D7B /* RegistationAndPatentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CBE2B71198600B30D7B /* RegistationAndPatentViewController.swift */; };
 		1A174CC12B7119A300B30D7B /* RegistrationAndPatentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CC02B7119A300B30D7B /* RegistrationAndPatentView.swift */; };
 		1A174CC32B711C8900B30D7B /* RegitrationAndPatentDataSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CC22B711C8900B30D7B /* RegitrationAndPatentDataSV.swift */; };
+		1A174CC62B7121CB00B30D7B /* ContactDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CC52B7121CB00B30D7B /* ContactDataViewController.swift */; };
+		1A174CC82B7121E200B30D7B /* ContactDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CC72B7121E200B30D7B /* ContactDataView.swift */; };
+		1A174CCB2B7125D600B30D7B /* TicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CCA2B7125D600B30D7B /* TicketsView.swift */; };
+		1A174CCD2B71315700B30D7B /* TransportTypeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CCC2B71315700B30D7B /* TransportTypeStackView.swift */; };
+		1A174CCF2B7139BC00B30D7B /* TicketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CCE2B7139BC00B30D7B /* TicketsViewModel.swift */; };
+		1A174CD12B7141E600B30D7B /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CD02B7141E600B30D7B /* DirectionView.swift */; };
+		1A174CD32B71509300B30D7B /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CD22B71509300B30D7B /* Ticket.swift */; };
 		1A454D462B5C07520057199F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D452B5C07520057199F /* AppDelegate.swift */; };
 		1A454D482B5C07520057199F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A454D472B5C07520057199F /* SceneDelegate.swift */; };
 		1A454D4F2B5C07530057199F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A454D4E2B5C07530057199F /* Assets.xcassets */; };
@@ -41,7 +48,7 @@
 		1AAEB7E92B66572100274454 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB7E82B66572100274454 /* RegistrationViewModel.swift */; };
 		1AAEB7EB2B665FF700274454 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB7EA2B665FF700274454 /* LogInViewModel.swift */; };
 		1AAEB7F42B69193200274454 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB7F32B69193200274454 /* ProfileViewController.swift */; };
-		1AAEB7F62B69193E00274454 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB7F52B69193E00274454 /* ServicesViewController.swift */; };
+		1AAEB7F62B69193E00274454 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB7F52B69193E00274454 /* TicketsViewController.swift */; };
 		1AAEB7F82B69194700274454 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB7F72B69194700274454 /* NewsViewController.swift */; };
 		1AAEB7FA2B6923EA00274454 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB7F92B6923EA00274454 /* UIView+Ext.swift */; };
 		1AAEB7FC2B6929B200274454 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB7FB2B6929B200274454 /* ProfileView.swift */; };
@@ -80,6 +87,13 @@
 		1A174CBE2B71198600B30D7B /* RegistationAndPatentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistationAndPatentViewController.swift; sourceTree = "<group>"; };
 		1A174CC02B7119A300B30D7B /* RegistrationAndPatentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAndPatentView.swift; sourceTree = "<group>"; };
 		1A174CC22B711C8900B30D7B /* RegitrationAndPatentDataSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegitrationAndPatentDataSV.swift; sourceTree = "<group>"; };
+		1A174CC52B7121CB00B30D7B /* ContactDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataViewController.swift; sourceTree = "<group>"; };
+		1A174CC72B7121E200B30D7B /* ContactDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataView.swift; sourceTree = "<group>"; };
+		1A174CCA2B7125D600B30D7B /* TicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsView.swift; sourceTree = "<group>"; };
+		1A174CCC2B71315700B30D7B /* TransportTypeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportTypeStackView.swift; sourceTree = "<group>"; };
+		1A174CCE2B7139BC00B30D7B /* TicketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewModel.swift; sourceTree = "<group>"; };
+		1A174CD02B7141E600B30D7B /* DirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionView.swift; sourceTree = "<group>"; };
+		1A174CD22B71509300B30D7B /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		1A454D422B5C07520057199F /* Injir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Injir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A454D452B5C07520057199F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A454D472B5C07520057199F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +123,7 @@
 		1AAEB7E82B66572100274454 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		1AAEB7EA2B665FF700274454 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		1AAEB7F32B69193200274454 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		1AAEB7F52B69193E00274454 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		1AAEB7F52B69193E00274454 /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		1AAEB7F72B69194700274454 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		1AAEB7F92B6923EA00274454 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		1AAEB7FB2B6929B200274454 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -181,6 +195,15 @@
 			path = RegistrationAndPatentViewController;
 			sourceTree = "<group>";
 		};
+		1A174CC42B7121A300B30D7B /* ContactDataViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A174CC52B7121CB00B30D7B /* ContactDataViewController.swift */,
+				1A174CC72B7121E200B30D7B /* ContactDataView.swift */,
+			);
+			path = ContactDataViewController;
+			sourceTree = "<group>";
+		};
 		1A454D392B5C07520057199F = {
 			isa = PBXGroup;
 			children = (
@@ -234,10 +257,11 @@
 			children = (
 				1A174CB32B6C0CA200B30D7B /* CustomStackView.swift */,
 				1A454D7B2B5C07D40057199F /* Extensions */,
+				1A174CC42B7121A300B30D7B /* ContactDataViewController */,
 				1A174CBD2B71195100B30D7B /* RegistrationAndPatentViewController */,
 				1A174CAB2B6C08FD00B30D7B /* PassportDataViewController */,
 				1AAEB7F22B69191900274454 /* ProfileViewController */,
-				1AAEB7F12B69190D00274454 /* ServicesViewController */,
+				1AAEB7F12B69190D00274454 /* TicketsViewController */,
 				1AAEB7F02B69190100274454 /* NewsViewController */,
 				1A454D822B5C11D90057199F /* HomeViewController */,
 				1AAEB7E12B65201700274454 /* MainTabBarViewController */,
@@ -254,6 +278,7 @@
 				1A454DDB2B5FEEE30057199F /* LanguageSelectionViewModel.swift */,
 				1AAEB7E82B66572100274454 /* RegistrationViewModel.swift */,
 				1AAEB7EA2B665FF700274454 /* LogInViewModel.swift */,
+				1A174CCE2B7139BC00B30D7B /* TicketsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -265,6 +290,7 @@
 				1A454D7C2B5C07DE0057199F /* Networking */,
 				1A454D7A2B5C07C30057199F /* Resources */,
 				1A454D792B5C07BA0057199F /* Classes */,
+				1A174CD22B71509300B30D7B /* Ticket.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,12 +394,15 @@
 			path = NewsViewController;
 			sourceTree = "<group>";
 		};
-		1AAEB7F12B69190D00274454 /* ServicesViewController */ = {
+		1AAEB7F12B69190D00274454 /* TicketsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1AAEB7F52B69193E00274454 /* ServicesViewController.swift */,
+				1AAEB7F52B69193E00274454 /* TicketsViewController.swift */,
+				1A174CCA2B7125D600B30D7B /* TicketsView.swift */,
+				1A174CCC2B71315700B30D7B /* TransportTypeStackView.swift */,
+				1A174CD02B7141E600B30D7B /* DirectionView.swift */,
 			);
-			path = ServicesViewController;
+			path = TicketsViewController;
 			sourceTree = "<group>";
 		};
 		1AAEB7F22B69191900274454 /* ProfileViewController */ = {
@@ -660,9 +689,10 @@
 				1A174CAD2B6C091F00B30D7B /* PassportDataViewController.swift in Sources */,
 				1A454DE02B5FF3560057199F /* HomeViewController.swift in Sources */,
 				1AAEB7E92B66572100274454 /* RegistrationViewModel.swift in Sources */,
-				1AAEB7F62B69193E00274454 /* ServicesViewController.swift in Sources */,
+				1AAEB7F62B69193E00274454 /* TicketsViewController.swift in Sources */,
 				1AAEB7F82B69194700274454 /* NewsViewController.swift in Sources */,
 				1A174CB22B6C0C8600B30D7B /* PassportDataStackView.swift in Sources */,
+				1A174CCF2B7139BC00B30D7B /* TicketsViewModel.swift in Sources */,
 				1A174CAF2B6C093B00B30D7B /* PassportDataView.swift in Sources */,
 				1A454DDE2B5FF0E40057199F /* Observable.swift in Sources */,
 				1A454DD72B5E909E0057199F /* RegistrationView.swift in Sources */,
@@ -675,18 +705,24 @@
 				1A174CBF2B71198600B30D7B /* RegistationAndPatentViewController.swift in Sources */,
 				1A454D842B5C11F40057199F /* HomeView.swift in Sources */,
 				1AAEB7FA2B6923EA00274454 /* UIView+Ext.swift in Sources */,
+				1A174CD32B71509300B30D7B /* Ticket.swift in Sources */,
 				1AAEB7E32B65205300274454 /* MainTabBarViewController.swift in Sources */,
+				1A174CC82B7121E200B30D7B /* ContactDataView.swift in Sources */,
+				1A174CCB2B7125D600B30D7B /* TicketsView.swift in Sources */,
 				1AAEB7E52B6535C900274454 /* RegistrationVC+Alert.swift in Sources */,
 				1A454DD52B5E908A0057199F /* RegistrationViewController.swift in Sources */,
+				1A174CD12B7141E600B30D7B /* DirectionView.swift in Sources */,
 				1A454D902B5C34B60057199F /* UITextField+Ext.swift in Sources */,
 				1A454D8C2B5C233A0057199F /* LogInViewController.swift in Sources */,
 				1A454D482B5C07520057199F /* SceneDelegate.swift in Sources */,
 				1A454D892B5C13E40057199F /* Resources.swift in Sources */,
 				1A454DDC2B5FEEE30057199F /* LanguageSelectionViewModel.swift in Sources */,
+				1A174CCD2B71315700B30D7B /* TransportTypeStackView.swift in Sources */,
 				1AAEB7FC2B6929B200274454 /* ProfileView.swift in Sources */,
 				1AAEB7EB2B665FF700274454 /* LogInViewModel.swift in Sources */,
 				1A174CC12B7119A300B30D7B /* RegistrationAndPatentView.swift in Sources */,
 				1AAEB8002B6A839E00274454 /* InformationAboutUserView.swift in Sources */,
+				1A174CC62B7121CB00B30D7B /* ContactDataViewController.swift in Sources */,
 				1A174CAA2B6BFA8F00B30D7B /* UsersDataView.swift in Sources */,
 				1AAEB8022B6A8E4000274454 /* ProfileViewController+Alert.swift in Sources */,
 			);

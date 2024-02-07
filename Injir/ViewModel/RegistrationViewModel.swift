@@ -47,7 +47,27 @@ class RegistrationViewModel {
         if error == nil {
             if let result = result {
                 let ref = Database.database().reference().child("users")
-                ref.child(result.user.uid).updateChildValues(["name": self.name!, "email": self.email!])
+                
+                let passportData = createPassportData()
+                let contactData = createContactData()
+                let registrationAndPatentData = createRegistrationAndPatentData()
+                
+                
+                
+                print("Before updating data in database")
+                ref.child(result.user.uid).updateChildValues(["name": self.name!, "email": self.email!, "password": self.password!, "passportData": passportData, "contactData": contactData, "registrationAndPatentData": registrationAndPatentData]) { (error, reference) in
+                    if let error = error {
+                        // Обработка ошибки
+                        print("Ошибка при обновлении данных: \(error.localizedDescription)")
+                    } else {
+                        // Данные успешно обновлены
+                        print("Данные успешно обновлены в базе данных")
+                    }
+                }
+                print("After updating data in database")
+
+
+                
             } else {
                 return "Неизвестная ошибка, result"
             }
@@ -59,6 +79,33 @@ class RegistrationViewModel {
     
     public func logInUser(completion: @escaping (AuthDataResult?, Error?) -> Void) {
         Auth.auth().signIn(withEmail: self.email!, password: self.password!, completion: completion)
+    }
+    
+    public func createPassportData() -> [String: String]{
+        let passportDataArray: [String: String] = [
+            "seriaAndNumber":"-",
+            "dateOfBith":"-",
+            "placeOfBith":"-",
+            "dateOfIssue":"-",
+            "organ":"-"
+        ]
+        return passportDataArray
+    }
+    
+    public func createRegistrationAndPatentData() -> [String: String] {
+        let registrationAndPatentDataArray: [String: String] = [
+            "temporaryRegistration":"-",
+            "permanentRegistration":"-",
+            "patentRegistration":"-"
+        ]
+        return registrationAndPatentDataArray
+    }
+    
+    public func createContactData() -> [String: String] {
+        let contactDataArray: [String: String] = [
+            "phoneNumber":"-"
+        ]
+        return contactDataArray
     }
     
     

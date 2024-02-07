@@ -40,4 +40,14 @@ extension UITextField: UITextFieldDelegate {
 
         self.defaultTextAttributes = textAttributes
     }
+    
+    func setPlaceholderColor(_ color: UIColor) {
+            guard let placeholder = self.placeholder else { return }
+            
+            let placeholderAttributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: color
+            ]
+            
+            self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: placeholderAttributes)
+        }
 }

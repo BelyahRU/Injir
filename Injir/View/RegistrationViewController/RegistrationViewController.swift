@@ -59,6 +59,7 @@ extension RegistrationViewController {
         guard let dataError = dataError else {
             viewModel.registerUser { result, error in
                 let message = self.viewModel.addUserToDatabase(result: result, error: error)
+                print(message)
                 guard let message = message else {
                     return
                 }

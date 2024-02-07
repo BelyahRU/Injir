@@ -71,6 +71,6 @@ extension ProfileViewController {
     }
     
     @objc func checkContact() {
-        
+        navigationController?.pushViewController(ContactDataViewController(), animated: false)
     }
 }

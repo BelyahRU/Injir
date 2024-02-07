@@ -71,17 +71,20 @@ class MainTabBarViewController: UITabBarController, ProfileViewControllerDelegat
 extension MainTabBarViewController {
     private func generateTabBar() {
         
+        
+        
         let profileVC = ProfileViewController()
+        profileVC.delegate = self
         let navigProfile = UINavigationController(rootViewController: profileVC)
         navigProfile.navigationBar.isHidden = true
-        let servicesVC = ServicesViewController()
+        let biletsVC = TicketsViewController()
         let newsVC = NewsViewController()
         
         
         viewControllers = [
             generateVC(viewController: newsVC, image: UIImage(named: Resources.TabBarItems.newsIcon), title: "Новости"),
             generateVC(viewController: navigProfile, image: UIImage(named: Resources.TabBarItems.profileIcon), title: "Профиль"),
-            generateVC(viewController: servicesVC, image: UIImage(named: Resources.TabBarItems.servicesIcon), title: "Cервисы")
+            generateVC(viewController: biletsVC, image: UIImage(named: Resources.TabBarItems.biletsIcon), title: "Билеты")
         ]
     }
     
