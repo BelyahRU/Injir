@@ -14,27 +14,60 @@ struct User {
     var passportData: PassportData
     var contactData: ContactData
     var registrationAndPatentData: RegistrationAndPatentData
-    var profession: Profession
+    var profession: ProfessionData
+    
+    
 }
 
 struct PassportData {
-    var seriaAndNumber: String
-    var dateOfBirth: String
-    var placeOfBirth: String
-    var dateOfIssue: String
-    var organ: String
+    var seriaAndNumber: String = "-"
+    var dateOfBirth: String = "-"
+    var placeOfBirth: String = "-"
+    var dateOfIssue: String = "-"
+    var organ: String = "-"
+    
+    func dictionaryRepresentation() -> [String: String] {
+        return [
+            "seriaAndNumber": seriaAndNumber,
+            "dateOfBirth": dateOfBirth,
+            "placeOfBirth": placeOfBirth,
+            "dateOfIssue": dateOfIssue,
+            "organ": organ
+        ]
+    }
 }
 
 struct RegistrationAndPatentData {
-    var temporaryRegistration: String
-    var permanentRegistration: String
-    var patentRegistration: String
+    var temporaryRegistration: String  = "-"
+    var permanentRegistration: String  = "-"
+    var patentRegistration: String  = "-"
+    
+    func dictionaryRepresentation() -> [String: String] {
+        return [
+            "temporaryRegistration": temporaryRegistration,
+            "permanentRegistration": permanentRegistration,
+            "patentRegistration": patentRegistration
+        ]
+    }
+    
 }
 
 struct ContactData {
-    var phoneNumber: String
+    var phoneNumber: String = "+79211487521"
+    
+    func dictionaryRepresentation() -> [String: String] {
+        return [
+            "phoneNumber": phoneNumber
+        ]
+    }
 }
 
-struct Profession {
-    var profession: String
+struct ProfessionData {
+    var profession: String = "-"
+    
+    func dictionaryRepresentation() -> [String: String] {
+        return [
+            "profession": profession
+        ]
+    }
 }

@@ -53,23 +53,26 @@ class RegistrationViewModel {
         }
         
         let ref = Database.database().reference().child("users")
+        
+        
         let passportData = createPassportData()
         let contactData = createContactData()
         let registrationAndPatentData = createRegistrationAndPatentData()
+        let professionData = createProfessionData()
         
         ref.child(result.user.uid).updateChildValues([
             "name": self.name ?? "",
             "email": self.email ?? "",
             "password": self.password ?? "",
+            "profession": professionData,
             "passportData": passportData,
             "contactData": contactData,
             "registrationAndPatentData": registrationAndPatentData
+            
         ]) { (error, reference) in
             if let error = error {
-                // Обработка ошибки
                 print("Ошибка при обновлении данных: \(error.localizedDescription)")
             } else {
-                // Данные успешно обновлены
                 print("Данные успешно обновлены в базе данных")
             }
         }
@@ -82,32 +85,27 @@ class RegistrationViewModel {
     }
     
     public func createPassportData() -> [String: String]{
-        let passport = PassportData(seriaAndNumber: "-", dateOfBirth: "-", placeOfBirth: "-", dateOfIssue: "-", organ: "-")
+        let passport = PassportData()
         
-        let passportDataArray: [String: String] = [
-            "seriaAndNumber":"-",
-            "dateOfBith":"-",
-            "placeOfBith":"-",
-            "dateOfIssue":"-",
-            "organ":"-"
-        ]
-        return passportDataArray
+        return passport.dictionaryRepresentation()
     }
     
     public func createRegistrationAndPatentData() -> [String: String] {
-        let registrationAndPatentDataArray: [String: String] = [
-            "temporaryRegistration":"-",
-            "permanentRegistration":"-",
-            "patentRegistration":"-"
-        ]
-        return registrationAndPatentDataArray
+        let registrationAndPatentData = RegistrationAndPatentData()
+        
+        return registrationAndPatentData.dictionaryRepresentation()
     }
     
     public func createContactData() -> [String: String] {
-        let contactDataArray: [String: String] = [
-            "phoneNumber":"-"
-        ]
-        return contactDataArray
+        let contactData = ContactData()
+        
+        return contactData.dictionaryRepresentation()
+    }
+    
+    public func createProfessionData() -> [String: String] {
+        let professionData = ProfessionData()
+        
+        return professionData.dictionaryRepresentation()
     }
     
     

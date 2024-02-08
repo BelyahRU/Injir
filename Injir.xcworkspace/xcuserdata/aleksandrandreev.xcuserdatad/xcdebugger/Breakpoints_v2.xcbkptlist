@@ -14,10 +14,10 @@
             filePath = "Injir/View/ProfileViewController/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "logOut()"
-            landmarkType = "7">
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "ProfileViewController"
+            landmarkType = "21">
             <Locations>
                <Location
                   uuid = "80CAC5FA-DBD2-4F5D-BA8B-2438A62ED981 - 5bef3e2f67bfe0e0"
@@ -270,8 +270,8 @@
             filePath = "Injir/View/ProfileViewController/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "logOut()"
             landmarkType = "7">
          </BreakpointContent>
@@ -290,6 +290,134 @@
             endingLineNumber = "64"
             landmarkName = "logOutButtonTapped()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "658B15AF-29BE-4BF5-B225-48421B169AEF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Injir/View/ProfileViewController/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "setupViewModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "658B15AF-29BE-4BF5-B225-48421B169AEF - 35efa92dcf0aad2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Injir.ProfileViewController.setupViewModel() -&gt; ()"
+                  moduleName = "Injir"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrandreev/Desktop/IOS/Work/Injir/Injir/View/ProfileViewController/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "658B15AF-29BE-4BF5-B225-48421B169AEF - f4be0aa49582f112"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in Injir.ProfileViewController.setupViewModel() -&gt; ()"
+                  moduleName = "Injir"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrandreev/Desktop/IOS/Work/Injir/Injir/View/ProfileViewController/ProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3540DC3B-27B9-4472-9AB9-6E610661709B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Injir/View/ProfileViewController/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "updateNameUI(name:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2563CD97-70F9-498B-9A7B-B8E724660B89"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Injir/ViewModel/ProfileViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "changeUserName(newUserName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "445757F2-33F6-445D-8343-705DE2B156AC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Injir/ViewModel/ProfileViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "changeUserName(newUserName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "445757F2-33F6-445D-8343-705DE2B156AC - c6415134e5d6b786"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in Injir.ProfileViewModel.changeUserName(newUserName: Swift.String) -&gt; ()"
+                  moduleName = "Injir"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrandreev/Desktop/IOS/Work/Injir/Injir/ViewModel/ProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "445757F2-33F6-445D-8343-705DE2B156AC - c6415134e5d6b786"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in Injir.ProfileViewModel.changeUserName(newUserName: Swift.String) -&gt; ()"
+                  moduleName = "Injir"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrandreev/Desktop/IOS/Work/Injir/Injir/ViewModel/ProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

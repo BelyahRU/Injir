@@ -11,6 +11,8 @@ class ProfileViewController: UIViewController {
     
     weak var delegate: ProfileViewControllerDelegate?
     
+    private let viewModel = ProfileViewModel()
+    
     public let profileView = ProfileView()
 
     override func viewDidLoad() {
@@ -19,16 +21,72 @@ class ProfileViewController: UIViewController {
     }
     
     private func configure() {
+        setupViewModel()
         setupView()
         setupButtons()
     }
     
-    private func setupView() {
-        view.addSubview(profileView)
-        profileView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+    private func setupViewModel() {
+        viewModel.nameOfUserObservable.bind { [weak self] newUsername in
+            DispatchQueue.main.async {
+                self?.updateNameUI(name: newUsername!)
+            }
+        }
+        viewModel.professionOfUserObservable.bind { [weak self]newProfession in
+            DispatchQueue.main.async {
+                self?.updateProfessionUI(professon: newProfession!)
+            }
+
         }
     }
+    
+    private func updateNameUI(name: String) {
+        self.profileView.informationAboutUserView.nameLabel.text = name
+    }
+    
+    private func updateProfessionUI(professon: String) {
+        self.profileView.informationAboutUserView.nameOfProfessionLabel.text = professon
+    }
+    
+ 
+    private func setupView() {
+        let group = DispatchGroup()
+        
+        // Получаем имя пользователя
+        group.enter()
+        viewModel.getUserName { userName in
+            defer { group.leave() }
+            if let userName = userName {
+                DispatchQueue.main.async {
+                    self.profileView.informationAboutUserView.nameLabel.text = userName
+                }
+            } else {
+                print("Failed to retrieve user name")
+            }
+        }
+        
+        // Получаем профессию пользователя
+        group.enter()
+        viewModel.getProfession { profession in
+            defer { group.leave() }
+            if let profession = profession {
+                DispatchQueue.main.async {
+                    self.profileView.informationAboutUserView.nameOfProfessionLabel.text = profession
+                }
+            } else {
+                print("Failed to retrieve profession")
+            }
+        }
+        
+        group.notify(queue: .main) {
+            // Когда оба запроса завершены, добавляем subview
+            self.view.addSubview(self.profileView)
+            self.profileView.snp.makeConstraints { make in
+                make.edges.equalToSuperview()
+            }
+        }
+    }
+
     
     private func setupButtons() {
         profileView.logOutButton.addTarget(self, action: #selector(logOut), for: .touchUpInside)
@@ -51,15 +109,14 @@ extension ProfileViewController {
     
     @objc func editName() {
         self.showAlert(title: "Имя") { newName in
-            self.profileView.informationAboutUserView.nameLabel.text = newName
+            self.viewModel.changeUserName(newUserName: newName)
         }
     }
     
     @objc func editProfession() {
         self.showAlert(title: "Профессия") { newProfession in
-            self.profileView.informationAboutUserView.nameOfProfessionLabel.text = newProfession
+            self.viewModel.changeProfession(newProfession: newProfession)
         }
-
     }
     
     @objc func checkPassport() {

@@ -11,7 +11,6 @@ class InformationAboutUserView: UIView {
     
     public let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Иванов Иван Иванович"
         label.textColor = Resources.Colors.purpleColor
         label.font = UIFont.systemFont(ofSize: 17)
         return label

@@ -55,6 +55,7 @@
 		1AAEB8002B6A839E00274454 /* InformationAboutUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB7FF2B6A839E00274454 /* InformationAboutUserView.swift */; };
 		1AAEB8022B6A8E4000274454 /* ProfileViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB8012B6A8E4000274454 /* ProfileViewController+Alert.swift */; };
 		1AC86ECE2B73E54800A06EA2 /* UsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC86ECD2B73E54800A06EA2 /* UsersData.swift */; };
+		1AC86ED02B73EAE300A06EA2 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC86ECF2B73EAE300A06EA2 /* ProfileViewModel.swift */; };
 		3E11134DC193831A4319F34C /* Pods_Injir_InjirUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C1D3B690F51DCF1E416226 /* Pods_Injir_InjirUITests.framework */; };
 		9A41797E26D28E8D768DB6B2 /* Pods_Injir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633D2AB35EDAAACB3D28D15E /* Pods_Injir.framework */; };
 		F166140E626D05F49B6D86A4 /* Pods_InjirTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C419CF574370620EF13BB8A1 /* Pods_InjirTests.framework */; };
@@ -131,6 +132,7 @@
 		1AAEB7FF2B6A839E00274454 /* InformationAboutUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAboutUserView.swift; sourceTree = "<group>"; };
 		1AAEB8012B6A8E4000274454 /* ProfileViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+Alert.swift"; sourceTree = "<group>"; };
 		1AC86ECD2B73E54800A06EA2 /* UsersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersData.swift; sourceTree = "<group>"; };
+		1AC86ECF2B73EAE300A06EA2 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		3416B8B90DC7A1C0F516A7A7 /* Pods-Injir.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Injir.debug.xcconfig"; path = "Target Support Files/Pods-Injir/Pods-Injir.debug.xcconfig"; sourceTree = "<group>"; };
 		38C1D3B690F51DCF1E416226 /* Pods_Injir_InjirUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Injir_InjirUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D89192ECC1AA8CDD3D609AE /* Pods-Injir-InjirUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Injir-InjirUITests.debug.xcconfig"; path = "Target Support Files/Pods-Injir-InjirUITests/Pods-Injir-InjirUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				1AAEB7E82B66572100274454 /* RegistrationViewModel.swift */,
 				1AAEB7EA2B665FF700274454 /* LogInViewModel.swift */,
 				1A174CCE2B7139BC00B30D7B /* TicketsViewModel.swift */,
+				1AC86ECF2B73EAE300A06EA2 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -712,6 +715,7 @@
 				1AAEB7E32B65205300274454 /* MainTabBarViewController.swift in Sources */,
 				1A174CC82B7121E200B30D7B /* ContactDataView.swift in Sources */,
 				1A174CCB2B7125D600B30D7B /* TicketsView.swift in Sources */,
+				1AC86ED02B73EAE300A06EA2 /* ProfileViewModel.swift in Sources */,
 				1AAEB7E52B6535C900274454 /* RegistrationVC+Alert.swift in Sources */,
 				1A454DD52B5E908A0057199F /* RegistrationViewController.swift in Sources */,
 				1A174CD12B7141E600B30D7B /* DirectionView.swift in Sources */,
