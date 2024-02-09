@@ -29,7 +29,17 @@ class CustomStackView: UIStackView {
         tf.textColor = Resources.Colors.purpleColor
         tf.isUserInteractionEnabled = false
         tf.font = UIFont.systemFont(ofSize: 17)
+        tf.autocapitalizationType = .none
         return tf
+    }()
+    
+    public let errorLabel: UILabel = {
+        let label = UILabel()
+        label.text = ""
+        label.isHidden = true
+        label.font = UIFont.systemFont(ofSize: 10)
+        label.textColor = Resources.Colors.redColor
+        return label
     }()
     
     init(topicText: String, data: String) {
@@ -53,6 +63,16 @@ class CustomStackView: UIStackView {
         currentText.isUserInteractionEnabled = answ
     }
     
+    public func setRedBorderColor() {
+        view.makeBordersColor(color: Resources.Colors.redCGColor)
+        errorLabel.isHidden = false
+    }
+    
+    public func setPurpleBorderColor() {
+        view.makeBordersColor(color: Resources.Colors.purpleCGColor)
+        errorLabel.isHidden = true
+    }
+    
     private func settingsForSV() {
         spacing = 8
         axis = .vertical
@@ -63,7 +83,9 @@ class CustomStackView: UIStackView {
         addArrangedSubview(topicLabel)
         addArrangedSubview(view)
         
+        
         view.addSubview(currentText)
+        view.addSubview(errorLabel)
     }
     
     private func setupConstraints() {
@@ -81,6 +103,12 @@ class CustomStackView: UIStackView {
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(15)
             make.trailing.equalToSuperview().inset(15)
+        }
+        
+        errorLabel.snp.makeConstraints { make in
+            make.trailing.equalToSuperview()
+            make.height.equalTo(22)
+            make.top.equalTo(view.snp.bottom)
         }
     }
     
