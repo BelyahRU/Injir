@@ -24,11 +24,12 @@ class CustomStackView: UIStackView {
         return view
     }()
     
-    public let currentText: UILabel = {
-        let label = UILabel()
-        label.textColor = Resources.Colors.purpleColor
-        label.font = UIFont.systemFont(ofSize: 17)
-        return label
+    public let currentText: UITextField = {
+        let tf = UITextField()
+        tf.textColor = Resources.Colors.purpleColor
+        tf.isUserInteractionEnabled = false
+        tf.font = UIFont.systemFont(ofSize: 17)
+        return tf
     }()
     
     init(topicText: String, data: String) {
@@ -46,6 +47,10 @@ class CustomStackView: UIStackView {
         settingsForSV()
         setupSubviews()
         setupConstraints()
+    }
+    
+    public func canEdit(_ answ: Bool) {
+        currentText.isUserInteractionEnabled = answ
     }
     
     private func settingsForSV() {
@@ -75,6 +80,7 @@ class CustomStackView: UIStackView {
         currentText.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(15)
+            make.trailing.equalToSuperview().inset(15)
         }
     }
     

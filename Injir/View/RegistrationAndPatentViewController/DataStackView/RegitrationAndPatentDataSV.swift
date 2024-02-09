@@ -28,6 +28,18 @@ class RegitrationAndPatentDataSV: UIStackView {
         setupConstraints()
     }
     
+    public func editData() {
+        temporaryRegistrationView.canEdit(true)
+        permanentRegistrationView.canEdit(true)
+        patentRegistrationView.canEdit(true)
+    }
+    
+    public func stopEditData() {
+        temporaryRegistrationView.canEdit(false)
+        permanentRegistrationView.canEdit(false)
+        patentRegistrationView.canEdit(false)
+    }
+    
     private func settingsForView() {
         spacing = 16
         axis = .vertical

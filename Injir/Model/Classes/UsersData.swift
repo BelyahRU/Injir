@@ -35,6 +35,14 @@ struct PassportData {
             "organ": organ
         ]
     }
+    
+    mutating func setValues(from dictionary: [String: String]) {
+           seriaAndNumber = dictionary["seriaAndNumber"] ?? "-"
+           dateOfBirth = dictionary["dateOfBirth"] ?? "-"
+           placeOfBirth = dictionary["placeOfBirth"] ?? "-"
+           dateOfIssue = dictionary["dateOfIssue"] ?? "-"
+           organ = dictionary["organ"] ?? "-"
+    }
 }
 
 struct RegistrationAndPatentData {
@@ -48,6 +56,12 @@ struct RegistrationAndPatentData {
             "permanentRegistration": permanentRegistration,
             "patentRegistration": patentRegistration
         ]
+    }
+    
+    mutating func setValues(from dictionary: [String: String]) {
+        temporaryRegistration = dictionary["temporaryRegistration"] ?? "-"
+        permanentRegistration = dictionary["permanentRegistration"] ?? "-"
+        patentRegistration = dictionary["patentRegistration"] ?? "-"
     }
     
 }

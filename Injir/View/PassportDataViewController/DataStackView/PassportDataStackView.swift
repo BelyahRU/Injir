@@ -35,6 +35,22 @@ class PassportDataStackView: UIStackView {
         axis = .vertical
     }
     
+    public func editData() {
+        seriaAndNumberSV.canEdit(true)
+        dateOfBithSV.canEdit(true)
+        placeOfBithSV.canEdit(true)
+        dateOfIssueSV.canEdit(true)
+        organSV.canEdit(true)
+    }
+    
+    public func stopEditData() {
+        seriaAndNumberSV.canEdit(false)
+        dateOfBithSV.canEdit(false)
+        placeOfBithSV.canEdit(false)
+        dateOfIssueSV.canEdit(false)
+        organSV.canEdit(false)
+    }
+    
     
     private func setupSubviews() {
         addArrangedSubview(seriaAndNumberSV)
