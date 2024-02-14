@@ -12,14 +12,13 @@ import FirebaseAuth
 class ProfileViewModel {
     public var nameOfUserObservable = Observable<String>("")
     public var professionOfUserObservable = Observable<String>("")
-    
+    public let ref = Database.database().reference()
     
     public func setUserName(name: String) {
         
     }
     
     public func getUserName(completion: @escaping (String?) -> Void) {
-        let ref = Database.database().reference()
         ref.child("users/\(Auth.auth().currentUser!.uid)/name").getData { error, snapshot in
             if let error = error {
                 print("Error getting data: \(error.localizedDescription)")
@@ -34,7 +33,6 @@ class ProfileViewModel {
     }
     
     public func getProfession(completion: @escaping (String?) -> Void) {
-        let ref = Database.database().reference()
         ref.child("users/\(Auth.auth().currentUser!.uid)/profession/profession").getData { error, snapshot in
             if let error = error {
                 print("Error getting data: \(error.localizedDescription)")
@@ -48,9 +46,18 @@ class ProfileViewModel {
         }
     }
     
+    public func getAvatarImage(completion: @escaping (String?) -> Void) {
+        ref.child("users/\(Auth.auth().currentUser!.uid)/avatar").observeSingleEvent(of: .value) { snapshot in
+            guard let base64String = snapshot.value as? String else {
+                completion(nil)
+                return
+            }
+            completion(base64String)
+        }
+    }
+    
+    
     public func changeUserName(newUserName: String){
-        let ref = Database.database().reference()
-        
         ref.child("users/\(Auth.auth().currentUser!.uid)/name").setValue(newUserName) { (error, response) in
             if error == nil {
                 self.nameOfUserObservable.value = newUserName
@@ -63,14 +70,22 @@ class ProfileViewModel {
     }
     
     public func changeProfession(newProfession: String){
-        let ref = Database.database().reference()
-        
         ref.child("users/\(Auth.auth().currentUser!.uid)/profession/profession").setValue(newProfession) { (error, response) in
             if error == nil {
                 self.professionOfUserObservable.value = newProfession
                 print("OK")
             } else {
                 print("Проблемы с новым именем")
+            }
+        }
+    }
+    
+    public func changeImage(data: Data) {
+        ref.child("users/\(Auth.auth().currentUser!.uid)/avatar").setValue(data.base64EncodedString()) { error, resp in
+            if error == nil {
+                print("OK")
+            } else {
+                print("Проблемы с новым аватаром")
             }
         }
     }

@@ -8,22 +8,52 @@
 import UIKit
 
 class NewsViewController: UIViewController {
+    
+    public let newsTableView = UITableView()
+    public let viewModel = NewsViewModel()
+    private let newsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Новости"
+        label.font = UIFont.systemFont(ofSize: 25, weight: .medium)
+        label.textColor = Resources.Colors.purpleColor
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .brown
-        // Do any additional setup after loading the view.
+        configure()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func configure() {
+        setupNewsTableView()
+        viewModel.getData()
     }
-    */
+    
+    func setupNewsTableView() {
+        newsTableView.dataSource = self
+        newsTableView.delegate = self
+        newsTableView.separatorColor = .clear
+        newsTableView.backgroundColor = .clear
+        
+        view.addSubview(newsLabel)
+        view.addSubview(newsTableView)
+        newsLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(82)
+        }
+        
+        newsTableView.snp.makeConstraints { make in
+            make.top.equalTo(newsLabel.snp.bottom).offset(28)
+            make.leading.equalToSuperview().offset(18)
+            make.trailing.equalToSuperview().inset(18)
+            make.bottom.equalToSuperview().inset(90)
+        }
+        
+        
+        registerCells()
+    }
+
 
 }
+
+

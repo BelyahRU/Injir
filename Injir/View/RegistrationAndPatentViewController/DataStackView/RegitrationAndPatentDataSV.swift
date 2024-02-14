@@ -9,9 +9,9 @@ import UIKit
 
 class RegitrationAndPatentDataSV: UIStackView {
 
-   public let temporaryRegistrationView = CustomStackView(topicText: "Временная регистрация", data: "-")
-   public let permanentRegistrationView = CustomStackView(topicText: "Постоянная регистрация", data: "-")
-   public let patentRegistrationView = CustomStackView(topicText: "Патент на работу", data: "-")
+   public let temporaryRegistrationView = CustomStackView(topicText: "Временная регистрация", placeholderText: "г.Cанкт-Петербург, Московский пр. д64, кв1")
+   public let permanentRegistrationView = CustomStackView(topicText: "Постоянная регистрация", placeholderText: "г.Cанкт-Петербург, Московский пр. д64, кв1")
+   public let patentRegistrationView = CustomStackView(topicText: "Патент на работу", placeholderText: "0000-000000")
     
     override init(frame: CGRect) {
         super.init(frame: frame)

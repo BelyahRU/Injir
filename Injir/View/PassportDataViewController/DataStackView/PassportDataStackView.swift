@@ -9,11 +9,11 @@ import UIKit
 
 class PassportDataStackView: UIStackView {
 
-    public let seriaAndNumberSV = CustomStackView(topicText: "Cерия и номер", data: "-")
-    public let dateOfBithSV = CustomStackView(topicText: "Дата рождения", data: "-")
-    public let placeOfBithSV = CustomStackView(topicText: "Место рождения", data: "-")
-    public let dateOfIssueSV = CustomStackView(topicText: "Дата выдачи паспорта", data: "-")
-    public let organSV = CustomStackView(topicText: "Орган выдавший паспорт", data: "-")
+    public let seriaAndNumberSV = CustomStackView(topicText: "Cерия и номер", placeholderText: "0000-000000")
+    public let dateOfBithSV = CustomStackView(topicText: "Дата рождения", placeholderText: "00.00.0000")
+    public let placeOfBithSV = CustomStackView(topicText: "Место рождения", placeholderText: "г.Москва, Московская обл.")
+    public let dateOfIssueSV = CustomStackView(topicText: "Дата выдачи паспорта", placeholderText: "00.00.0000")
+    public let organSV = CustomStackView(topicText: "Орган выдавший паспорт", placeholderText: "ТП УФМС РОССИ ПО ВОЛОГОДСКОЙ...")
     
     override init(frame: CGRect) {
         super.init(frame: frame)

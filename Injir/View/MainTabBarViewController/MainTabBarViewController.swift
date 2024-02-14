@@ -40,7 +40,6 @@ class MainTabBarViewController: UITabBarController, ProfileViewControllerDelegat
         tabBar.unselectedItemTintColor = Resources.Colors.purpleColorAlpha70
         tabBar.tintColor = Resources.Colors.purpleColor
         view.backgroundColor = .white
-        
         selectedIndex = 1
         
     }
@@ -48,6 +47,7 @@ class MainTabBarViewController: UITabBarController, ProfileViewControllerDelegat
     private func setupSubviews() {
         view.addSubview(customTabBarView)
         view.bringSubviewToFront(self.tabBar)
+        
     }
     
     
@@ -71,7 +71,14 @@ class MainTabBarViewController: UITabBarController, ProfileViewControllerDelegat
 extension MainTabBarViewController {
     private func generateTabBar() {
         
-        
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .clear
+           
+            self.tabBar.standardAppearance = appearance
+            self.tabBar.scrollEdgeAppearance = .none
+        }
         
         let profileVC = ProfileViewController()
         profileVC.delegate = self

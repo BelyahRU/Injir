@@ -62,7 +62,7 @@ extension PassportDataViewController {
         if sender.titleLabel?.text == "Редактировать" {
             passportDataView.changeEditButton()
         } else {
-            if isValidData() == true {
+            if isValidData() {
                 clearValidationFields()
                 passportDataView.changeOkButton()
                 sendNewDataToDatabase()

@@ -12,7 +12,7 @@
 		1A174CAF2B6C093B00B30D7B /* PassportDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CAE2B6C093B00B30D7B /* PassportDataView.swift */; };
 		1A174CB22B6C0C8600B30D7B /* PassportDataStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CB12B6C0C8600B30D7B /* PassportDataStackView.swift */; };
 		1A174CB42B6C0CA200B30D7B /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CB32B6C0CA200B30D7B /* CustomStackView.swift */; };
-		1A174CBF2B71198600B30D7B /* RegistationAndPatentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CBE2B71198600B30D7B /* RegistationAndPatentViewController.swift */; };
+		1A174CBF2B71198600B30D7B /* RegistrationAndPatentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CBE2B71198600B30D7B /* RegistrationAndPatentViewController.swift */; };
 		1A174CC12B7119A300B30D7B /* RegistrationAndPatentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CC02B7119A300B30D7B /* RegistrationAndPatentView.swift */; };
 		1A174CC32B711C8900B30D7B /* RegitrationAndPatentDataSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CC22B711C8900B30D7B /* RegitrationAndPatentDataSV.swift */; };
 		1A174CC62B7121CB00B30D7B /* ContactDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A174CC52B7121CB00B30D7B /* ContactDataViewController.swift */; };
@@ -61,6 +61,13 @@
 		1AC86ED72B752ABE00A06EA2 /* ContactDataStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC86ED62B752ABE00A06EA2 /* ContactDataStackView.swift */; };
 		1AC86EDA2B75320F00A06EA2 /* ContactDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC86ED92B75320F00A06EA2 /* ContactDataViewModel.swift */; };
 		1AC86EDD2B7649D600A06EA2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC86EDC2B7649D600A06EA2 /* Extensions.swift */; };
+		1AC86EDF2B7A474400A06EA2 /* ProfileVC+UIImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC86EDE2B7A474400A06EA2 /* ProfileVC+UIImagePicker.swift */; };
+		1AC86EE12B7A4EFA00A06EA2 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC86EE02B7A4EFA00A06EA2 /* APICaller.swift */; };
+		1AC86EE32B7A4F0900A06EA2 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC86EE22B7A4F0900A06EA2 /* NetworkConstant.swift */; };
+		1AC86EE52B7A71A900A06EA2 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC86EE42B7A71A900A06EA2 /* NewsModel.swift */; };
+		1AC86EE92B7BB3C800A06EA2 /* NewsVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC86EE82B7BB3C800A06EA2 /* NewsVC+TableView.swift */; };
+		1AC86EEC2B7BB52100A06EA2 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC86EEB2B7BB52100A06EA2 /* NewsTableViewCell.swift */; };
+		1AC86EEE2B7BB87000A06EA2 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC86EED2B7BB87000A06EA2 /* NewsViewModel.swift */; };
 		3E11134DC193831A4319F34C /* Pods_Injir_InjirUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C1D3B690F51DCF1E416226 /* Pods_Injir_InjirUITests.framework */; };
 		9A41797E26D28E8D768DB6B2 /* Pods_Injir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633D2AB35EDAAACB3D28D15E /* Pods_Injir.framework */; };
 		F166140E626D05F49B6D86A4 /* Pods_InjirTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C419CF574370620EF13BB8A1 /* Pods_InjirTests.framework */; };
@@ -91,7 +98,7 @@
 		1A174CAE2B6C093B00B30D7B /* PassportDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportDataView.swift; sourceTree = "<group>"; };
 		1A174CB12B6C0C8600B30D7B /* PassportDataStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportDataStackView.swift; sourceTree = "<group>"; };
 		1A174CB32B6C0CA200B30D7B /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
-		1A174CBE2B71198600B30D7B /* RegistationAndPatentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistationAndPatentViewController.swift; sourceTree = "<group>"; };
+		1A174CBE2B71198600B30D7B /* RegistrationAndPatentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAndPatentViewController.swift; sourceTree = "<group>"; };
 		1A174CC02B7119A300B30D7B /* RegistrationAndPatentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAndPatentView.swift; sourceTree = "<group>"; };
 		1A174CC22B711C8900B30D7B /* RegitrationAndPatentDataSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegitrationAndPatentDataSV.swift; sourceTree = "<group>"; };
 		1A174CC52B7121CB00B30D7B /* ContactDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +150,13 @@
 		1AC86ED62B752ABE00A06EA2 /* ContactDataStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataStackView.swift; sourceTree = "<group>"; };
 		1AC86ED92B75320F00A06EA2 /* ContactDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataViewModel.swift; sourceTree = "<group>"; };
 		1AC86EDC2B7649D600A06EA2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1AC86EDE2B7A474400A06EA2 /* ProfileVC+UIImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileVC+UIImagePicker.swift"; sourceTree = "<group>"; };
+		1AC86EE02B7A4EFA00A06EA2 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		1AC86EE22B7A4F0900A06EA2 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
+		1AC86EE42B7A71A900A06EA2 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		1AC86EE82B7BB3C800A06EA2 /* NewsVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsVC+TableView.swift"; sourceTree = "<group>"; };
+		1AC86EEB2B7BB52100A06EA2 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		1AC86EED2B7BB87000A06EA2 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		3416B8B90DC7A1C0F516A7A7 /* Pods-Injir.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Injir.debug.xcconfig"; path = "Target Support Files/Pods-Injir/Pods-Injir.debug.xcconfig"; sourceTree = "<group>"; };
 		38C1D3B690F51DCF1E416226 /* Pods_Injir_InjirUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Injir_InjirUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D89192ECC1AA8CDD3D609AE /* Pods-Injir-InjirUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Injir-InjirUITests.debug.xcconfig"; path = "Target Support Files/Pods-Injir-InjirUITests/Pods-Injir-InjirUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				1AC86ED32B75221F00A06EA2 /* DataStackView */,
-				1A174CBE2B71198600B30D7B /* RegistationAndPatentViewController.swift */,
+				1A174CBE2B71198600B30D7B /* RegistrationAndPatentViewController.swift */,
 				1A174CC02B7119A300B30D7B /* RegistrationAndPatentView.swift */,
 			);
 			path = RegistrationAndPatentViewController;
@@ -298,6 +312,7 @@
 				1AC86ED12B750FA800A06EA2 /* PassportDataViewModel.swift */,
 				1AC86ED42B75229400A06EA2 /* RegistrtionAndPatentViewModel.swift */,
 				1AC86ED92B75320F00A06EA2 /* ContactDataViewModel.swift */,
+				1AC86EED2B7BB87000A06EA2 /* NewsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -320,6 +335,7 @@
 				1A174CD22B71509300B30D7B /* Ticket.swift */,
 				1A454DDD2B5FF0E40057199F /* Observable.swift */,
 				1AC86ECD2B73E54800A06EA2 /* UsersData.swift */,
+				1AC86EE42B7A71A900A06EA2 /* NewsModel.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -346,6 +362,8 @@
 		1A454D7C2B5C07DE0057199F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				1AC86EE02B7A4EFA00A06EA2 /* APICaller.swift */,
+				1AC86EE22B7A4F0900A06EA2 /* NetworkConstant.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -410,7 +428,9 @@
 		1AAEB7F02B69190100274454 /* NewsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1AC86EEA2B7BB4F800A06EA2 /* Views */,
 				1AAEB7F72B69194700274454 /* NewsViewController.swift */,
+				1AC86EE82B7BB3C800A06EA2 /* NewsVC+TableView.swift */,
 			);
 			path = NewsViewController;
 			sourceTree = "<group>";
@@ -434,6 +454,7 @@
 				1AAEB7FB2B6929B200274454 /* ProfileView.swift */,
 				1AAEB7FF2B6A839E00274454 /* InformationAboutUserView.swift */,
 				1A174CA92B6BFA8F00B30D7B /* UsersDataView.swift */,
+				1AC86EDE2B7A474400A06EA2 /* ProfileVC+UIImagePicker.swift */,
 			);
 			path = ProfileViewController;
 			sourceTree = "<group>";
@@ -460,6 +481,14 @@
 				1AC86EDC2B7649D600A06EA2 /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1AC86EEA2B7BB4F800A06EA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AC86EEB2B7BB52100A06EA2 /* NewsTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B41098D7952125D9CB66BC71 /* Frameworks */ = {
@@ -735,9 +764,11 @@
 				1AC86ED52B75229400A06EA2 /* RegistrtionAndPatentViewModel.swift in Sources */,
 				1A454DE02B5FF3560057199F /* HomeViewController.swift in Sources */,
 				1AAEB7E92B66572100274454 /* RegistrationViewModel.swift in Sources */,
+				1AC86EE52B7A71A900A06EA2 /* NewsModel.swift in Sources */,
 				1AAEB7F62B69193E00274454 /* TicketsViewController.swift in Sources */,
 				1AAEB7F82B69194700274454 /* NewsViewController.swift in Sources */,
 				1A174CB22B6C0C8600B30D7B /* PassportDataStackView.swift in Sources */,
+				1AC86EE12B7A4EFA00A06EA2 /* APICaller.swift in Sources */,
 				1A174CCF2B7139BC00B30D7B /* TicketsViewModel.swift in Sources */,
 				1A174CAF2B6C093B00B30D7B /* PassportDataView.swift in Sources */,
 				1A454DDE2B5FF0E40057199F /* Observable.swift in Sources */,
@@ -748,22 +779,26 @@
 				1A454D8E2B5C27E20057199F /* LogInView.swift in Sources */,
 				1AAEB7F42B69193200274454 /* ProfileViewController.swift in Sources */,
 				1A454DD22B5E8AA10057199F /* UIButton+Ext.swift in Sources */,
-				1A174CBF2B71198600B30D7B /* RegistationAndPatentViewController.swift in Sources */,
+				1AC86EE32B7A4F0900A06EA2 /* NetworkConstant.swift in Sources */,
+				1A174CBF2B71198600B30D7B /* RegistrationAndPatentViewController.swift in Sources */,
 				1A454D842B5C11F40057199F /* HomeView.swift in Sources */,
 				1AAEB7FA2B6923EA00274454 /* UIView+Ext.swift in Sources */,
 				1A174CD32B71509300B30D7B /* Ticket.swift in Sources */,
 				1AC86ED22B750FA800A06EA2 /* PassportDataViewModel.swift in Sources */,
+				1AC86EEE2B7BB87000A06EA2 /* NewsViewModel.swift in Sources */,
 				1AAEB7E32B65205300274454 /* MainTabBarViewController.swift in Sources */,
 				1AC86EDD2B7649D600A06EA2 /* Extensions.swift in Sources */,
 				1A174CC82B7121E200B30D7B /* ContactDataView.swift in Sources */,
 				1AC86EDA2B75320F00A06EA2 /* ContactDataViewModel.swift in Sources */,
 				1A174CCB2B7125D600B30D7B /* TicketsView.swift in Sources */,
+				1AC86EEC2B7BB52100A06EA2 /* NewsTableViewCell.swift in Sources */,
 				1AC86ED02B73EAE300A06EA2 /* ProfileViewModel.swift in Sources */,
 				1AAEB7E52B6535C900274454 /* RegistrationVC+Alert.swift in Sources */,
 				1A454DD52B5E908A0057199F /* RegistrationViewController.swift in Sources */,
 				1A174CD12B7141E600B30D7B /* DirectionView.swift in Sources */,
 				1A454D902B5C34B60057199F /* UITextField+Ext.swift in Sources */,
 				1A454D8C2B5C233A0057199F /* LogInViewController.swift in Sources */,
+				1AC86EE92B7BB3C800A06EA2 /* NewsVC+TableView.swift in Sources */,
 				1A454D482B5C07520057199F /* SceneDelegate.swift in Sources */,
 				1A454D892B5C13E40057199F /* Resources.swift in Sources */,
 				1AC86ED72B752ABE00A06EA2 /* ContactDataStackView.swift in Sources */,
@@ -771,6 +806,7 @@
 				1A174CCD2B71315700B30D7B /* TransportTypeStackView.swift in Sources */,
 				1AAEB7FC2B6929B200274454 /* ProfileView.swift in Sources */,
 				1AAEB7EB2B665FF700274454 /* LogInViewModel.swift in Sources */,
+				1AC86EDF2B7A474400A06EA2 /* ProfileVC+UIImagePicker.swift in Sources */,
 				1A174CC12B7119A300B30D7B /* RegistrationAndPatentView.swift in Sources */,
 				1AAEB8002B6A839E00274454 /* InformationAboutUserView.swift in Sources */,
 				1A174CC62B7121CB00B30D7B /* ContactDataViewController.swift in Sources */,

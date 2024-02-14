@@ -62,8 +62,29 @@ extension ContactDataViewController {
         if sender.titleLabel?.text == "Изменить номер телефона" {
             contactDataView.changeEditButton()
         } else {
-            contactDataView.changeOkButton()
-            sendNewDataToDatabase()
+            if isCorrectPhoneNumber() {
+                contactDataView.changeOkButton()
+                sendNewDataToDatabase()
+            }
+        }
+    }
+}
+
+extension ContactDataViewController {
+    private func isCorrectPhoneNumber() -> Bool {
+        let phoneNumber = contactDataView.dataSVs.phoneNumberSV.currentText.text!
+        if phoneNumber.isEmpty {
+            contactDataView.dataSVs.phoneNumberSV.setRedBorderColor()
+            contactDataView.dataSVs.phoneNumberSV.errorLabel.text = "Введите номер телефона"
+            return false
+        } else if !viewModel.isValidPhoneNumber(phoneNumber) {
+            contactDataView.dataSVs.phoneNumberSV.errorLabel.text = "Номер телефона введен неверно"
+            contactDataView.dataSVs.phoneNumberSV.setRedBorderColor()
+            return false
+        } else {
+            contactDataView.dataSVs.phoneNumberSV.errorLabel.text = ""
+            contactDataView.dataSVs.phoneNumberSV.setPurpleBorderColor()
+            return true
         }
     }
 }

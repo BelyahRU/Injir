@@ -41,6 +41,20 @@ extension UITextField: UITextFieldDelegate {
         self.defaultTextAttributes = textAttributes
     }
     
+    func setParagraphStyle(width: CGFloat) {
+        guard let placeholder = self.placeholder else { return }
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.maximumLineHeight = width
+        
+        let placeholderAttributes: [NSAttributedString.Key: Any] = [
+            .paragraphStyle: paragraphStyle,
+            .foregroundColor: Resources.Colors.purpleColorAlpha70
+        ]
+        
+        self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: placeholderAttributes)
+    }
+    
     func setPlaceholderColor(_ color: UIColor) {
             guard let placeholder = self.placeholder else { return }
             

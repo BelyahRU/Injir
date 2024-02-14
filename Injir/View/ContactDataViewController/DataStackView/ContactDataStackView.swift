@@ -9,9 +9,9 @@ import UIKit
 
 class ContactDataStackView: UIStackView {
     
-    public let emailNumberSV = CustomStackView(topicText: "Электронная почта", data: "-")
+    public let emailNumberSV = CustomStackView(topicText: "Электронная почта", placeholderText: "")
 
-    public let phoneNumberSV = CustomStackView(topicText: "Номер телефона", data: "-")
+    public let phoneNumberSV = CustomStackView(topicText: "Номер телефона", placeholderText: "+79999999999")
     
     override init(frame: CGRect) {
         super.init(frame: frame)

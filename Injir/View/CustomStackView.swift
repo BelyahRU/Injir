@@ -42,10 +42,11 @@ class CustomStackView: UIStackView {
         return label
     }()
     
-    init(topicText: String, data: String) {
+    init(topicText: String, placeholderText: String) {
         super.init(frame: .zero)
         topicLabel.text = topicText
-        currentText.text = data
+        currentText.placeholder = placeholderText
+        currentText.setParagraphStyle(width: 25)
         configure()
     }
     
@@ -58,6 +59,7 @@ class CustomStackView: UIStackView {
         setupSubviews()
         setupConstraints()
     }
+    
     
     public func canEdit(_ answ: Bool) {
         currentText.isUserInteractionEnabled = answ

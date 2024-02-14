@@ -11,7 +11,7 @@ class ProfileViewController: UIViewController {
     
     weak var delegate: ProfileViewControllerDelegate?
     
-    private let viewModel = ProfileViewModel()
+    public let viewModel = ProfileViewModel()
     
     public let profileView = ProfileView()
 
@@ -24,6 +24,7 @@ class ProfileViewController: UIViewController {
         setupViewModel()
         setupView()
         setupButtons()
+        setupImageView()
     }
     
     private func setupViewModel() {
@@ -77,7 +78,17 @@ class ProfileViewController: UIViewController {
                 print("Failed to retrieve profession")
             }
         }
-        
+        group.enter()
+        viewModel.getAvatarImage { base64String in
+            defer { group.leave() }
+            if let base64String = base64String {
+                DispatchQueue.main.async {
+                    let imageData = Data(base64Encoded: base64String)
+                    let image = UIImage(data: imageData!)
+                    self.profileView.avatarImageView.image = image
+                }
+            }
+        }
         group.notify(queue: .main) {
             // Когда оба запроса завершены, добавляем subview
             self.view.addSubview(self.profileView)
@@ -124,7 +135,7 @@ extension ProfileViewController {
     }
     
     @objc func checkRegistrationAndPatent() {
-        navigationController?.pushViewController(RegistationAndPatentViewController(), animated: false)
+        navigationController?.pushViewController(RegistrationAndPatentViewController(), animated: false)
     }
     
     @objc func checkContact() {

@@ -57,4 +57,17 @@ class ContactDataViewModel {
     }
     
     
+    public func isValidPhoneNumber(_ phoneNumber: String) -> Bool {
+        var number = phoneNumber
+        guard number.hasPrefix("+7") && number.count == 12 else {
+            return false
+        }
+        
+        let startIndex = number.index(number.startIndex, offsetBy: 2)
+        let phoneNumberDigits = number[startIndex...]
+        return phoneNumberDigits.allSatisfy { $0.isNumber }
+    }
+
+    
+    
 }
