@@ -9,16 +9,13 @@ import Foundation
 
 class NewsViewModel {
     
-    var dataSource: NewsResponse?
+    
     var articles: [Article]?
     
     func getData() {
         APICaller.getNews { result in
-            
             switch result {
             case .success(let data):
-                print("Count \(data.totalResults)")
-                self.dataSource = data
                 self.articles = data.articles
                 self.changeTitles()
             case .failure(let error):
@@ -47,6 +44,6 @@ class NewsViewModel {
     }
     
     func numberOfRows() -> Int {
-        self.dataSource?.articles.count ?? 0
+        self.articles?.count ?? 0
     }
 }

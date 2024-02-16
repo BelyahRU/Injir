@@ -46,6 +46,7 @@ class ProfileViewModel {
         }
     }
     
+    //MARK: getting image
     public func getAvatarImage(completion: @escaping (String?) -> Void) {
         ref.child("users/\(Auth.auth().currentUser!.uid)/avatar").observeSingleEvent(of: .value) { snapshot in
             guard let base64String = snapshot.value as? String else {

@@ -56,17 +56,22 @@ class NewsTableViewCell: UITableViewCell {
     }
     
     private func configure() {
+        setupSubviews()
+        setupConstratints()
+    }
+    
+    public func setupSubviews() {
         addSubview(roundedView)
         roundedView.addSubview(titleLabel)
         roundedView.addSubview(authorLabel)
         roundedView.addSubview(dateLabel)
         
-        
+    }
+    
+    public func setupConstratints() {
         roundedView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.bottom.equalToSuperview().inset(10)
-//            make.leading.equalToSuperview().offset(18)
-//            make.trailing.equalToSuperview().inset(18)
             make.width.equalTo(UIScreen.main.bounds.width-36)
             make.centerX.equalToSuperview()
         }

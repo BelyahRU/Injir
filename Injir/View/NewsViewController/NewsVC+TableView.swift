@@ -10,7 +10,12 @@ import UIKit
 
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
-    
+    func settingsForTableView() {
+        newsTableView.dataSource = self
+        newsTableView.delegate = self
+        newsTableView.separatorColor = .clear
+        newsTableView.backgroundColor = .clear
+    }
     
     func registerCells() {
         newsTableView.register(NewsTableViewCell.self, forCellReuseIdentifier: NewsTableViewCell.indetifier)
@@ -21,8 +26,6 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
             self.newsTableView.reloadData()
         }
     }
-    
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfRows()

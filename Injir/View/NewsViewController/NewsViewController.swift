@@ -25,18 +25,24 @@ class NewsViewController: UIViewController {
     }
     
     private func configure() {
-        setupNewsTableView()
-        viewModel.getData()
+        setupSubviews()
+        setupConstraints()
+        setupViewModel()
+        settingsForTableView()
     }
     
-    func setupNewsTableView() {
-        newsTableView.dataSource = self
-        newsTableView.delegate = self
-        newsTableView.separatorColor = .clear
-        newsTableView.backgroundColor = .clear
-        
+    private func setupViewModel() {
+        settingsForTableView()
+        viewModel.getData()
+        registerCells()
+    }
+    
+    private func setupSubviews() {
         view.addSubview(newsLabel)
         view.addSubview(newsTableView)
+    }
+    
+    private func setupConstraints() {
         newsLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(82)
@@ -48,9 +54,6 @@ class NewsViewController: UIViewController {
             make.trailing.equalToSuperview().inset(18)
             make.bottom.equalToSuperview().inset(90)
         }
-        
-        
-        registerCells()
     }
 
 
